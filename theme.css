@@ -83,10 +83,60 @@ d-appendix {
 /* Feature grid on main page */
 .grid-container {
   display: inline-grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-item {
   text-align: center;
   padding: 30px;
 } 
+
+.grid-icon {
+  padding-bottom: 15px;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+/* Style buttons */
+.btn {
+  background-color: #455a64;
+  border: none;
+  color: white;
+  padding: 10px 15px 10px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #2a363c;
+} 
+
+/* Button icons */
+.btn-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Increase logo size */
+.nav-left {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.distill-site-header .logo img {
+  max-height: 30px;
+}
+

@@ -3,21 +3,118 @@ title: "Machine Learning in R"
 site: distill::distill_website
 ---
 
-
 Efficient, object-oriented programming on the building blocks of machine learning.
 
 <div class="grid-container">
-  <div class="grid-item"><i class="bi-alarm" style="font-size: 3rem;"></i><br>
-  Feature 1</div>
-  <div class="grid-item"><i class="bi-qr-code" style="font-size: 3rem;"></i><br>
-  Feature 2</div>
-  <div class="grid-item"><i class="bi-github" style="font-size: 3rem;"></i><br>
-  Feature 3</div>
-  <div class="grid-item"><i class="bi-unlock" style="font-size: 3rem;"></i><br>
-  Feature 4</div>
-  <div class="grid-item"><i class="bi-tsunami" style="font-size: 3rem;"></i><br>
-  Feature 5</div>
-  <div class="grid-item"><i class="bi-toggles" style="font-size: 3rem;"></i><br>
-  Feature 6</div>
+  <div class="grid-item">
+  <div class="grid-icon"><i class="bi-alarm icon"></i></div>
+  Easy interface for scientists and commercial applications.
+  </div>
+  <div class="grid-item">
+  <div class="grid-icon"><i class="bi-pen icon"></i></div>
+  More than 100 machine learning algorithms.
+  </div>
+  <div class="grid-item">
+  <div class="grid-icon"><i class="bi-github icon"></i></div>
+  Clean OO-design with `R6` classes.
+  </div>
+  <div class="grid-item">
+  <div class="grid-icon"><i class="bi-server icon"></i></div>
+  Easy parallelization with the `future` package.
+  </div>
+  <div class="grid-item">
+  <div class="grid-icon"><i class="bi-tsunami icon"></i></div>
+  State-of-the-art optimization algorithms.
+  </div>
+  <div class="grid-item">
+  <div class="grid-icon"><i class="bi-toggles icon"></i></div>
+  Dataflow programming with pipelines.</div>
 </div> 
+
+<div class="btn-container">
+<a href="github.com" class="btn"><i class="bi-github btn-icon"></i> GitHub</a>
+<a href="github.com" class="btn"><i class="bi-book btn-icon"></i> Resources</a>
+<a href="github.com" class="btn"><i class="bi-truck btn-icon"></i> Gallery</a>
+<a href="github.com" class="btn"><i class="bi-twitter btn-icon"></i> Twitter</a>
+</div>
+
+# Code Example
+
+## Basic
+
+```{r, include=FALSE}
+set.seed(7832)
+lgr::get_logger("mlr3")$set_threshold("warn")
+lgr::get_logger("bbotk")$set_threshold("warn")
+```
+
+```{r, eval=FALSE}
+library(mlr3)
+
+# retrieve task
+task = tsk("penguins")
+
+# load learner and set hyperparameter
+learner = lrn("classif.rpart", cp = .01)
+
+# automatic resampling
+resampling = rsmp("cv", folds = 3L)
+rr = resample(task, learner, resampling)
+
+# set measure and score
+measure = msr("classif.acc")
+rr$score(measure)
+```
+
+## Tuning
+
+```{r, eval=FALSE}
+library(mlr3tuning)
+library(mlr3tuningspaces)
+
+# retrieve task
+task = tsk("penguins")
+
+# load learner and set search space
+learner = lts(lrn("classif.rpart"))
+
+# hyperparameter tuning on the penguins data set
+instance = tune(
+  method = "random_search",
+  task = task,
+  learner = learner,
+  resampling = rsmp("cv", folds = 3),
+  measure = msr("classif.acc"),
+  term_evals = 10,
+  batch_size = 5
+)
+
+# best performing hyperparameter configuration
+instance$result
+```
+
+## Pipelines
+
+```{r, eval=FALSE}
+library(mlr3)
+library(mlr3pipelines)
+library(mlr3learners)
+
+# retrieve task
+task = tsk("german_credit")
+
+# set base and super learner
+base_learners = list(
+  lrn("classif.rpart", predict_type = "prob"),
+  lrn("classif.kknn", predict_type = "prob")
+)
+super_learner = lrn("classif.log_reg")
+
+# create pipeline and convert to graph learner
+graph_stack = pipeline_stacking(base_learners, super_learner)
+graph_learner = as_learner(graph_stack)
+
+# train on german credit task
+graph_learner$train(task)
+```
 
