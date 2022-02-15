@@ -32,10 +32,10 @@ Efficient, object-oriented programming on the building blocks of machine learnin
 </div> 
 
 <div class="btn-container">
-<a href="github.com" class="btn"><i class="bi-github btn-icon"></i> GitHub</a>
-<a href="github.com" class="btn"><i class="bi-book btn-icon"></i> Resources</a>
-<a href="github.com" class="btn"><i class="bi-truck btn-icon"></i> Gallery</a>
-<a href="github.com" class="btn"><i class="bi-twitter btn-icon"></i> Twitter</a>
+<a href="https://github.com/mlr-org/mlr3" class="btn"><i class="bi-github btn-icon"></i> GitHub</a>
+<a href="https://mlr3gallery.mlr-org.com/" class="btn"><i class="bi-truck btn-icon"></i> Gallery</a>
+<a href="https://twitter.com/bbischl" class="btn"><i class="bi-twitter btn-icon"></i> Twitter</a>
+<a href="https://stackoverflow.com/questions/tagged/mlr3" class="btn"><i class="bi-stack btn-icon"></i> StackOverflow</a>
 </div>
 
 # Code Example

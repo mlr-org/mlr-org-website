@@ -131,12 +131,7 @@ d-appendix {
 }
 
 /* Increase logo size */
-.nav-left {
-  display: flex !important;
-  align-items: center !important;
-}
-
 .distill-site-header .logo img {
   max-height: 30px;
+  margin-bottom: -6px
 }
-
