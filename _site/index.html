@@ -2122,7 +2122,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /* Optional: embed custom fonts here with `@import`          */
   /* This must remain at the top of this file.                 */
-
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 
   html {
@@ -2188,9 +2188,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
 
+  /* Title left align */
   .distill-site-header .title {
     text-align:         left;
-  }</style>
+  }
+
+  /* Feature grid on main page */
+  .grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .grid-item {
+    text-align: center;
+    padding: 30px;
+  } </style>
   <style type="text/css">
   /* base style */
 
@@ -2404,6 +2416,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <p>Efficient, object-oriented programming on the building blocks of machine learning.</p>
+<div class="grid-container">
+<div class="grid-item">
+<i class="bi-alarm" style="font-size: 3rem;"></i><br> Feature 1
+</div>
+<div class="grid-item">
+<i class="bi-qr-code" style="font-size: 3rem;"></i><br> Feature 2
+</div>
+<div class="grid-item">
+<i class="bi-github" style="font-size: 3rem;"></i><br> Feature 3
+</div>
+<div class="grid-item">
+<i class="bi-unlock" style="font-size: 3rem;"></i><br> Feature 4
+</div>
+<div class="grid-item">
+<i class="bi-tsunami" style="font-size: 3rem;"></i><br> Feature 5
+</div>
+<div class="grid-item">
+<i class="bi-toggles" style="font-size: 3rem;"></i><br> Feature 6
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

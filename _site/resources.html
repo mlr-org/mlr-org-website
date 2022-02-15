@@ -2122,7 +2122,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /* Optional: embed custom fonts here with `@import`          */
   /* This must remain at the top of this file.                 */
-
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 
   html {
@@ -2188,9 +2188,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
 
+  /* Title left align */
   .distill-site-header .title {
     text-align:         left;
-  }</style>
+  }
+
+  /* Feature grid on main page */
+  .grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .grid-item {
+    text-align: center;
+    padding: 30px;
+  } </style>
   <style type="text/css">
   /* base style */
 
@@ -2403,6 +2415,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
+<h1 id="general">General</h1>
 <ul>
 <li>We <em>started</em> writing a <a href="https://mlr3book.mlr-org.com/">book</a>. This should be the central entry point to the package.</li>
 <li>The <a href="https://mlr3gallery.mlr-org.com">mlr3gallery</a> has some case studies and demonstrates how frequently occurring problems can be solved. It is still in early days so stay tuned for more to come.</li>

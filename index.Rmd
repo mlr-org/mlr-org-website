@@ -3,4 +3,21 @@ title: "Machine Learning in R"
 site: distill::distill_website
 ---
 
+
 Efficient, object-oriented programming on the building blocks of machine learning.
+
+<div class="grid-container">
+  <div class="grid-item"><i class="bi-alarm" style="font-size: 3rem;"></i><br>
+  Feature 1</div>
+  <div class="grid-item"><i class="bi-qr-code" style="font-size: 3rem;"></i><br>
+  Feature 2</div>
+  <div class="grid-item"><i class="bi-github" style="font-size: 3rem;"></i><br>
+  Feature 3</div>
+  <div class="grid-item"><i class="bi-unlock" style="font-size: 3rem;"></i><br>
+  Feature 4</div>
+  <div class="grid-item"><i class="bi-tsunami" style="font-size: 3rem;"></i><br>
+  Feature 5</div>
+  <div class="grid-item"><i class="bi-toggles" style="font-size: 3rem;"></i><br>
+  Feature 6</div>
+</div> 
+
