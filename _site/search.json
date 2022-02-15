@@ -1,0 +1,33 @@
+{
+  "articles": [
+    {
+      "path": "blog.html",
+      "title": "Blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-02-15T13:54:10+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Machine Learning in R",
+      "author": [],
+      "contents": "\nEfficient, object-oriented programming on the building blocks of machine learning.\n\n\n\n",
+      "last_modified": "2022-02-15T13:54:10+01:00"
+    },
+    {
+      "path": "packages.html",
+      "title": "Packages",
+      "author": [],
+      "contents": "\nBasic\nPackage\nStatus\nCRAN\nChecks\nmlr3\n\n\n\nmlr3learners\n\n\n\nmlr3pipelines\n\n\n\nmlr3verse\n\n\n\nOptimization\nPackage\nStatus\nCRAN\nChecks\nbbotk\n\n\n\nmlr3tuning\n\n\n\nmlr3hyperband\n\n\n\nmlr3tuningspaces\n\n\n\nmlr3fselect\n\n\n\nmlr3mbo\n\n\n\nSpatial\nPackage\nStatus\nCRAN\nChecks\nmlr3spatial\n\n\n\nmlr3spatiotempcv\n\n\n\nVisualization\nPackage\nStatus\nCRAN\nChecks\nmlr3viz\n\n\n\nResources\nPackage\nStatus\nCRAN\nChecks\nmlr3book\n\n\n\nmlr3gallery\n\n\n\nMisc\nPackage\nStatus\nCRAN\nChecks\nmlr3batchmark\n\n\n\nmlr3benchmark\n\n\n\nmlr3cluster\n\n\n\nmlr3data\n\n\n\nmlr3db\n\n\n\nmlr3fairness\n\n\n\nmlr3filters\n\n\n\nmlr3measures\n\n\n\nmlr3keras\n\n\n\nmlr3misc\n\n\n\nmlr3oml\n\n\n\nmlr3ordinal\n\n\n\nmlr3proba\n\n\n\nparadox\n\n\n\n\n\n\n",
+      "last_modified": "2022-02-15T13:54:13+01:00"
+    },
+    {
+      "path": "resources.html",
+      "title": "Resources",
+      "author": [],
+      "contents": "\nWe started writing a book. This should be the central entry point to the package.\nThe mlr3gallery has some case studies and demonstrates how frequently occurring problems can be solved. It is still in early days so stay tuned for more to come.\nReference manual\nFAQ\nAsk questions on Stackoverflow (tag #mlr3)\nExtension Learners\nRecommended core regression, classification, and survival learners are in mlr3learners\nAll others are in mlr3extralearners\nUse the learner search to get a simple overview\nUse the learner status to see their build status\n\nCheatsheets\nOverview of cheatsheets\nmlr3\nmlr3tuning\nmlr3pipelines\n\nVideos:\nuseR2019 talk on mlr3\nuseR2019 talk on mlr3pipelines and mlr3tuning\nuseR2020 tutorial on mlr3, mlr3tuning and mlr3pipelines\nRecorded talk about mlr3spatiotempcv and mlr3spatial at OpenDataScience Europe Conference 2021 in Wageningen, NL\n\nCourses/Lectures\nThe course Introduction to Machine learning (I2ML) is a free and open flipped classroom course on the basics of machine learning. mlr3 is used in the demos and exercises.\n\nTemplates/Tutorials\nmlr3-learndrake: Shows how to use mlr3 with drake for reproducible ML workflow automation.\n\nList of extension packages\nmlr-outreach contains public talks and slides resources.\nOur blog about mlr and mlr3. (We are not the most frequent bloggers ;) )\nWiki: Contains mainly information for developers.\n\n\n\n",
+      "last_modified": "2022-02-15T13:54:13+01:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
