@@ -1,20 +1,20 @@
 ---
-title: "Introducing mlr3cluster: Cluster Analysis Package"
-description: |
-  Tired of learning to use multiple packages to access clustering algorithms?
-author:
-  - name: Damir Pulatov
-    url: https://github.com/damirpolat
-date: 2020-08-26
-output:
-  distill::distill_article:
-    self_contained: false
+title: 'Introducing mlr3cluster: Cluster Analysis Package'
+authors: ["damir-pulatov"]
+date: '2020-10-05'
+slug: introducing mlr3cluster cluster analysis package
+categories: 
+  - R
+tags: 
+  - mlr3
+  - mlr3cluster
+  - mlr3viz
+  - cluster analysis
+  - tutorial
+output: 
+blogdown::html_page:
+  toc: true
 ---
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 Tired of learning to use multiple packages to access clustering algorithms? 
 
@@ -226,5 +226,3 @@ If you have any issues with the package or would like to request a new feature, 
 
 ## Acknowledgements
 I would like to thank the following people for their help and guidance: Michel Lang, Lars Kotthoff, Martin Binder, Patrick Schratz, Bernd Bischl. 
-
-
