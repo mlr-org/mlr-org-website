@@ -39,7 +39,86 @@
       <title>mlr3 Package Updates - Q4/2021</title>
       <dc:creator>Patrick Schratz</dc:creator>
       <link>https://mlr-org.com/posts/2022-01-03-mlr3-package-updates-q42021</link>
-      <description>This posts gives an overview by listing the recent release notes of mlr3 packages from the last quarter.</description>
+      <description>
+
+
+&lt;p&gt;Due to the high amount of packages in the mlr3 ecosystem, it is hard to keep up with the latest changes across all packages. This posts gives an overview by listing the recent release notes of mlr3 packages from the last quarter. Note that only CRAN packages are listed here and the sort order is alphabetically.&lt;/p&gt;
+&lt;p&gt;Interval: 2021-10-01 - 2021-12-31&lt;/p&gt;
+&lt;h1 id="mlr3-0.13.0---httpsgithub.commlr-orgmlr3"&gt;mlr3 0.13.0 - &lt;a href="https://github.com/mlr-org/mlr3" class="uri"&gt;https://github.com/mlr-org/mlr3&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Machine Learning in R - Next Generation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learners which are capable of resuming/continuing (e.g., learner &lt;code&gt;(classif|regr|surv).xgboost&lt;/code&gt; with hyperparameter &lt;code&gt;nrounds&lt;/code&gt; updated) can now optionally store a stack of trained learners to be used to hotstart their training. Note that this feature is still somewhat experimental. See &lt;code&gt;HotstartStack&lt;/code&gt; and #719.&lt;/li&gt;
+&lt;li&gt;New measures to score similarity of selected feature sets: &lt;code&gt;sim.jaccard&lt;/code&gt; (Jaccard Index) and &lt;code&gt;sim.phi&lt;/code&gt; (Phi coefficient) (#690).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;predict_newdata()&lt;/code&gt; now also supports &lt;code&gt;DataBackend&lt;/code&gt; as input.&lt;/li&gt;
+&lt;li&gt;New function &lt;code&gt;install_pkgs()&lt;/code&gt; to install required packages. This generic works for all objects with a &lt;code&gt;packages&lt;/code&gt; field as well as &lt;code&gt;ResampleResult&lt;/code&gt; and &lt;code&gt;BenchmarkResult&lt;/code&gt; (#728).&lt;/li&gt;
+&lt;li&gt;New learner &lt;code&gt;regr.debug&lt;/code&gt; for debugging.&lt;/li&gt;
+&lt;li&gt;New &lt;code&gt;Task&lt;/code&gt; method &lt;code&gt;$set_levels()&lt;/code&gt; to control how data with factor columns is returned, independent of the used &lt;code&gt;DataBackend&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Measures now return &lt;code&gt;NA&lt;/code&gt; if prerequisite are not met (#699). This allows to conveniently score your experiments with multiple measures having different requirements.&lt;/li&gt;
+&lt;li&gt;Feature names may no longer contain the special character &lt;code&gt;%&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3benchmark-0.1.3---httpsgithub.commlr-orgmlr3benchmark"&gt;mlr3benchmark 0.1.3 - &lt;a href="https://github.com/mlr-org/mlr3benchmark" class="uri"&gt;https://github.com/mlr-org/mlr3benchmark&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Analysis and Visualisation of Benchmark Experiments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix README.&lt;/li&gt;
+&lt;li&gt;Fix for PMCMRplus.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3db-0.4.2---httpsgithub.commlr-orgmlr3db"&gt;mlr3db 0.4.2 - &lt;a href="https://github.com/mlr-org/mlr3db" class="uri"&gt;https://github.com/mlr-org/mlr3db&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Data Base Backend for ‘mlr3’&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatibility fixes with new duckdb version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3learners-0.5.1----httpsgithub.commlr-orgmlr3learners"&gt;mlr3learners 0.5.1- - &lt;a href="https://github.com/mlr-org/mlr3learners" class="uri"&gt;https://github.com/mlr-org/mlr3learners&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Recommended learners for mlr3&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;eval_metric()&lt;/code&gt; is now explicitly set for xgboost learners to silence a deprecation warning.&lt;/li&gt;
+&lt;li&gt;Improved how the added hyperparameter &lt;code&gt;mtry.ratio&lt;/code&gt; is converted to &lt;code&gt;mtry&lt;/code&gt; to simplify tuning.&lt;/li&gt;
+&lt;li&gt;Multiple updates to hyperparameter sets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3pipelines-0.4.0---httpsgithub.commlr-orgmlr3pipelines"&gt;mlr3pipelines 0.4.0 - &lt;a href="https://github.com/mlr-org/mlr3pipelines" class="uri"&gt;https://github.com/mlr-org/mlr3pipelines&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Preprocessing Operators and Pipelines for ‘mlr3’&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New operator &lt;code&gt;%&amp;gt;&amp;gt;!%&lt;/code&gt; that modifies Graphs in-place.&lt;/li&gt;
+&lt;li&gt;New methods &lt;code&gt;chain_graphs()&lt;/code&gt;, &lt;code&gt;concat_graphs()&lt;/code&gt;, &lt;code&gt;Graph$chain()&lt;/code&gt; as alternatives for &lt;code&gt;%&amp;gt;&amp;gt;%&lt;/code&gt; and &lt;code&gt;%&amp;gt;&amp;gt;!%&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;New methods &lt;code&gt;pos()&lt;/code&gt; and &lt;code&gt;ppls()&lt;/code&gt; which create lists of PipeOps/Graphs and can be seen as “plural” forms of &lt;code&gt;po()&lt;/code&gt; and &lt;code&gt;ppl()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;po()&lt;/code&gt; S3-method for PipeOp class that clones a PipeOp object and optionally modifies its attributes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Graph$add_pipeop()&lt;/code&gt; now clones the PipeOp being added.&lt;/li&gt;
+&lt;li&gt;Documentation: Clarified documentation about cloning of input arguments in several places.&lt;/li&gt;
+&lt;li&gt;Performance enhancements for Graph concatenation.&lt;/li&gt;
+&lt;li&gt;More informative error outputs.&lt;/li&gt;
+&lt;li&gt;New attribute graph_model &lt;code&gt;GraphLearner&lt;/code&gt; class, which gets the trained graph.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;as_learner()&lt;/code&gt; S3-method for PipeOp class that turns wraps a PipeOp in a Graph and turns that into a Learner.&lt;/li&gt;
+&lt;li&gt;Changed PipeOps:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PipeOpHistBin&lt;/code&gt;: renamed ‘bins’ Param to ‘breaks’&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PipeOpImputeHist&lt;/code&gt;: fix handling of integer features spanning the entire represented integer range&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PipeOpImputeOOR&lt;/code&gt;: fix handling of integer features spanning the entire represented integer range&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PipeOpProxy&lt;/code&gt;: Avoid unnecessary clone&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PipeOpScale&lt;/code&gt;: Performance improvement&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3proba-0.4.2---httpsgithub.commlr-orgmlr3proba"&gt;mlr3proba 0.4.2 - &lt;a href="https://github.com/mlr-org/mlr3proba" class="uri"&gt;https://github.com/mlr-org/mlr3proba&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Probabilistic Supervised Learning for ‘mlr3’&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Patch for linux.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3spatial-0.1.0-httpsgithub.commlr-orgmlr3spatial"&gt;mlr3spatial 0.1.0 &lt;a href="https://github.com/mlr-org/mlr3spatial" class="uri"&gt;https://github.com/mlr-org/mlr3spatial&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Support for Spatial Objects Within the ‘mlr3’ Ecosystem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3tuningspaces-0.0.1---httpsgithub.commlr-orgmlr3tuningspaces"&gt;mlr3tuningspaces 0.0.1 - &lt;a href="https://github.com/mlr-org/mlr3tuningspaces" class="uri"&gt;https://github.com/mlr-org/mlr3tuningspaces&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Search Spaces for Hyperparameter Tuning&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="mlr3viz-0.5.7---httpsgithub.commlr-orgmlr3viz"&gt;mlr3viz 0.5.7 - &lt;a href="https://github.com/mlr-org/mlr3viz" class="uri"&gt;https://github.com/mlr-org/mlr3viz&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Description: Visualizations for ‘mlr3’&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatibility fix for testthat.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>b8947692014ca6024896109a659143b6</distill:md5>
+      <category>R</category>
       <guid>https://mlr-org.com/posts/2022-01-03-mlr3-package-updates-q42021</guid>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
       <media:content url="https://mlr-org.com/posts/2022-01-03-mlr3-package-updates-q42021/logo.png" medium="image" type="image/png" width="581" height="296"/>
