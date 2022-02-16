@@ -9,5 +9,5 @@ Place external images in the subdirectory.
 3. Run `rmarkdown::render_site(encoding = 'UTF-8')` to render the website.
 The website is created within the `docs/` directory. 
 Open `index.html` to check your post.
-4. Open a pull request and commit the all changed files.
+4. Open a pull request and commit all changed files.
 Merged post are published via github pages.
