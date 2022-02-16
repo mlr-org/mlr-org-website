@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
   </div>
 </div> 
 
-## <i class="bi-toggles"></i> Optimization 
+## <i class="bi-sliders"></i> Optimization 
 
 <div class="grid-container-package">
   <div class="grid-item-package">

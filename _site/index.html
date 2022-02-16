@@ -2199,12 +2199,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-bottom:      -6px
   }
 
-
   /* Feature grid */
   .grid-container {
     display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Feature grid 3 columns on desktop */
+  @media only screen and (min-width: 768px) {
+    /* Package grid */
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
 
   .grid-item {
     text-align: center;
@@ -2272,11 +2279,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* Package grid */
   .grid-container-package {
     display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 10px;
     row-gap: 10px;
     margin-bottom: 30px;
   }
+
+  /* Package grid 3 columns on desktop */
+  @media only screen and (min-width: 768px) {
+    /* Package grid */
+    .grid-container-package {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
 
   .grid-item-package {
     text-align: left;
@@ -2530,37 +2545,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="grid-container">
 <div class="grid-item">
 <div class="grid-icon">
-<i class="bi-alarm icon"></i>
+<i class="bi-code-square"></i>
 </div>
-Easy interface for scientists and commercial applications.
-</div>
-<div class="grid-item">
-<div class="grid-icon">
-<i class="bi-pen icon"></i>
-</div>
-More than 100 machine learning algorithms.
+A well designed and easy to learn interface.
 </div>
 <div class="grid-item">
 <div class="grid-icon">
-<i class="bi-github icon"></i>
+<i class="bi-pen"></i>
 </div>
-Clean OO-design with <code>R6</code> classes.
-</div>
-<div class="grid-item">
-<div class="grid-icon">
-<i class="bi-server icon"></i>
-</div>
-Easy parallelization with the <code>future</code> package.
+More than 100 connected machine learning algorithms.
 </div>
 <div class="grid-item">
 <div class="grid-icon">
-<i class="bi-tsunami icon"></i>
+<i class="bi-box"></i>
+</div>
+Light on dependencies.
+</div>
+<div class="grid-item">
+<div class="grid-icon">
+<i class="bi-stack"></i>
+</div>
+Quick parallelization with the <code>future</code> package.
+</div>
+<div class="grid-item">
+<div class="grid-icon">
+<i class="bi-sliders"></i>
 </div>
 State-of-the-art optimization algorithms.
 </div>
 <div class="grid-item">
 <div class="grid-icon">
-<i class="bi-toggles icon"></i>
+<i class="bi-share"></i>
 </div>
 Dataflow programming with pipelines.
 </div>

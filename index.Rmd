@@ -7,27 +7,27 @@ Efficient, object-oriented programming on the building blocks of machine learnin
 
 <div class="grid-container">
   <div class="grid-item">
-  <div class="grid-icon"><i class="bi-alarm icon"></i></div>
-  Easy interface for scientists and commercial applications.
+  <div class="grid-icon"><i class="bi-code-square"></i></div>
+  A well designed and easy to learn interface.
   </div>
   <div class="grid-item">
-  <div class="grid-icon"><i class="bi-pen icon"></i></div>
-  More than 100 machine learning algorithms.
+  <div class="grid-icon"><i class="bi-pen"></i></div>
+  More than 100 connected machine learning algorithms.
   </div>
   <div class="grid-item">
-  <div class="grid-icon"><i class="bi-github icon"></i></div>
-  Clean OO-design with `R6` classes.
+  <div class="grid-icon"><i class="bi-box"></i></div>
+  Light on dependencies.
   </div>
   <div class="grid-item">
-  <div class="grid-icon"><i class="bi-server icon"></i></div>
-  Easy parallelization with the `future` package.
+  <div class="grid-icon"><i class="bi-stack"></i></div>
+  Quick parallelization with the `future` package.
   </div>
   <div class="grid-item">
-  <div class="grid-icon"><i class="bi-tsunami icon"></i></div>
+  <div class="grid-icon"><i class="bi-sliders"></i></div>
   State-of-the-art optimization algorithms.
   </div>
   <div class="grid-item">
-  <div class="grid-icon"><i class="bi-toggles icon"></i></div>
+  <div class="grid-icon"><i class="bi-share"></i></div>
   Dataflow programming with pipelines.</div>
 </div> 
 
