@@ -2200,7 +2200,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
 
-  /* Feature grid on main page */
+  /* Feature grid */
   .grid-container {
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2252,17 +2252,67 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /* Headings */
   h1 {
-    font-size: 36px;
+    font-size: 2.5rem !important;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 2rem !important;
   }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+
 
   /* Allow horizontal scroll in citation box */
   .citation {
     overflow-x: auto !important;
-  }</style>
+  }
+
+  /* Package grid */
+  .grid-container-package {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .grid-item-package {
+    text-align: left;
+    padding: 10px;
+    background-color: #f1f1f1;
+  } 
+
+  .grid-item-package:hover {
+    background-color: #cccccc;
+  } 
+
+  div.grid-item-package h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  div.grid-item-package a {
+    border-bottom: 0px;
+    text-decoration: none;
+  }
+
+  div.grid-item-package i {
+    font-size: 0.75rem;
+    margin-left: 10px;
+  }
+
+  i.status-stable {
+    color: #B4CFB0;
+  }
+
+  i.status-maturing {
+    color: #FBC6A4;
+  }
+
+  </style>
   <style type="text/css">
   /* base style */
 
@@ -2476,258 +2526,219 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<h1 id="basic">Basic</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Package</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">CRAN</th>
-<th style="text-align: left;">Checks</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3">mlr3</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3/actions"><img src="https://github.com/mlr-org/mlr3/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3"><img src="https://www.r-pkg.org/badges/version-ago/mlr3" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3.html"><img src="https://cranchecks.info/badges/summary/mlr3" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3learners">mlr3learners</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3learners/actions"><img src="https://github.com/mlr-org/mlr3learners/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3learners"><img src="https://www.r-pkg.org/badges/version-ago/mlr3learners" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3learners.html"><img src="https://cranchecks.info/badges/summary/mlr3learners" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3pipelines">mlr3pipelines</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3pipelines/actions"><img src="https://github.com/mlr-org/mlr3pipelines/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3pipelines"><img src="https://www.r-pkg.org/badges/version-ago/mlr3pipelines" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3pipelines.html"><img src="https://cranchecks.info/badges/summary/mlr3pipelines" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3verse">mlr3verse</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3verse/actions"><img src="https://github.com/mlr-org/mlr3verse/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3verse"><img src="https://www.r-pkg.org/badges/version-ago/mlr3verse" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3verse.html"><img src="https://cranchecks.info/badges/summary/mlr3verse" alt="CRAN Checks" /></a></td>
-</tr>
-</tbody>
-</table>
-<h1 id="optimization">Optimization</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Package</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">CRAN</th>
-<th style="text-align: left;">Checks</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/bbotk">bbotk</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/bbotk/actions"><img src="https://github.com/mlr-org/bbotk/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=bbotk"><img src="https://www.r-pkg.org/badges/version-ago/bbotk" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_bbotk.html"><img src="https://cranchecks.info/badges/summary/bbotk" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3tuning">mlr3tuning</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3tuning/actions"><img src="https://github.com/mlr-org/mlr3tuning/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3tuning"><img src="https://www.r-pkg.org/badges/version-ago/mlr3tuning" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3tuning.html"><img src="https://cranchecks.info/badges/summary/mlr3tuning" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3hyperband">mlr3hyperband</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3hyperband/actions"><img src="https://github.com/mlr-org/mlr3hyperband/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3hyperband"><img src="https://www.r-pkg.org/badges/version-ago/mlr3hyperband" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3hyperband.html"><img src="https://cranchecks.info/badges/summary/mlr3hyperband" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3tuningspaces">mlr3tuningspaces</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3tuningspaces/actions"><img src="https://github.com/mlr-org/mlr3tuningspaces/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3tuningspaces"><img src="https://www.r-pkg.org/badges/version-ago/mlr3tuningspaces" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3tuningspaces.html"><img src="https://cranchecks.info/badges/summary/mlr3tuningspaces" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3fselect">mlr3fselect</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3fselect/actions"><img src="https://github.com/mlr-org/mlr3fselect/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3fselect"><img src="https://www.r-pkg.org/badges/version-ago/mlr3fselect" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3fselect.html"><img src="https://cranchecks.info/badges/summary/mlr3fselect" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3mbo">mlr3mbo</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3mbo/actions"><img src="https://github.com/mlr-org/mlr3mbo/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3mbo"><img src="https://www.r-pkg.org/badges/version-ago/mlr3mbo" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3mbo.html"><img src="https://cranchecks.info/badges/summary/mlr3mbo" alt="CRAN Checks" /></a></td>
-</tr>
-</tbody>
-</table>
-<h1 id="spatial">Spatial</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Package</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">CRAN</th>
-<th style="text-align: left;">Checks</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3spatial">mlr3spatial</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3spatial/actions"><img src="https://github.com/mlr-org/mlr3spatial/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3spatial"><img src="https://www.r-pkg.org/badges/version-ago/mlr3spatial" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3spatial.html"><img src="https://cranchecks.info/badges/summary/mlr3spatial" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3spatiotempcv">mlr3spatiotempcv</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3spatiotempcv/actions"><img src="https://github.com/mlr-org/mlr3spatiotempcv/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3spatiotempcv"><img src="https://www.r-pkg.org/badges/version-ago/mlr3spatiotempcv" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3spatiotempcv.html"><img src="https://cranchecks.info/badges/summary/mlr3spatiotempcv" alt="CRAN Checks" /></a></td>
-</tr>
-</tbody>
-</table>
-<h1 id="visualization">Visualization</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Package</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">CRAN</th>
-<th style="text-align: left;">Checks</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3viz">mlr3viz</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3viz/actions"><img src="https://github.com/mlr-org/mlr3viz/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3viz"><img src="https://www.r-pkg.org/badges/version-ago/mlr3viz" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3viz.html"><img src="https://cranchecks.info/badges/summary/mlr3viz" alt="CRAN Checks" /></a></td>
-</tr>
-</tbody>
-</table>
-<h1 id="resources">Resources</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Package</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">CRAN</th>
-<th style="text-align: left;">Checks</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3book">mlr3book</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3book/actions"><img src="https://github.com/mlr-org/mlr3book/workflows/mlr3book/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3gallery">mlr3gallery</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3gallery/actions"><img src="https://github.com/mlr-org/mlr3gallery/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<h1 id="misc">Misc</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Package</th>
-<th style="text-align: left;">Status</th>
-<th style="text-align: left;">CRAN</th>
-<th style="text-align: left;">Checks</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3batchmark">mlr3batchmark</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3batchmark/actions"><img src="https://github.com/mlr-org/mlr3batchmark/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3batchmark"><img src="https://www.r-pkg.org/badges/version-ago/mlr3batchmark" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3batchmark.html"><img src="https://cranchecks.info/badges/summary/mlr3batchmark" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3benchmark">mlr3benchmark</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3benchmark/actions"><img src="https://github.com/mlr-org/mlr3benchmark/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3benchmark"><img src="https://www.r-pkg.org/badges/version-ago/mlr3benchmark" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3benchmark.html"><img src="https://cranchecks.info/badges/summary/mlr3benchmark" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3cluster">mlr3cluster</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3cluster/actions"><img src="https://github.com/mlr-org/mlr3cluster/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3cluster"><img src="https://www.r-pkg.org/badges/version-ago/mlr3cluster" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3cluster.html"><img src="https://cranchecks.info/badges/summary/mlr3cluster" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3data">mlr3data</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3data/actions"><img src="https://github.com/mlr-org/mlr3data/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3data"><img src="https://www.r-pkg.org/badges/version-ago/mlr3data" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3data.html"><img src="https://cranchecks.info/badges/summary/mlr3data" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3db">mlr3db</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3db/actions"><img src="https://github.com/mlr-org/mlr3db/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3db"><img src="https://www.r-pkg.org/badges/version-ago/mlr3db" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3db.html"><img src="https://cranchecks.info/badges/summary/mlr3db" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3fairness">mlr3fairness</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3fairness/actions"><img src="https://github.com/mlr-org/mlr3fairness/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3fairness"><img src="https://www.r-pkg.org/badges/version-ago/mlr3fairness" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3fairness.html"><img src="https://cranchecks.info/badges/summary/mlr3fairness" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3filters">mlr3filters</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3filters/actions"><img src="https://github.com/mlr-org/mlr3filters/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3filters"><img src="https://www.r-pkg.org/badges/version-ago/mlr3filters" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3filters.html"><img src="https://cranchecks.info/badges/summary/mlr3filters" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3measures">mlr3measures</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3measures/actions"><img src="https://github.com/mlr-org/mlr3measures/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3measures"><img src="https://www.r-pkg.org/badges/version-ago/mlr3measures" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3measures.html"><img src="https://cranchecks.info/badges/summary/mlr3measures" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3keras">mlr3keras</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3keras/actions"><img src="https://github.com/mlr-org/mlr3keras/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3keras"><img src="https://www.r-pkg.org/badges/version-ago/mlr3keras" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3keras.html"><img src="https://cranchecks.info/badges/summary/mlr3keras" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3misc">mlr3misc</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3misc/actions"><img src="https://github.com/mlr-org/mlr3misc/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3misc"><img src="https://www.r-pkg.org/badges/version-ago/mlr3misc" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3misc.html"><img src="https://cranchecks.info/badges/summary/mlr3misc" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3oml">mlr3oml</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3oml/actions"><img src="https://github.com/mlr-org/mlr3oml/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3oml"><img src="https://www.r-pkg.org/badges/version-ago/mlr3oml" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3oml.html"><img src="https://cranchecks.info/badges/summary/mlr3oml" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3ordinal">mlr3ordinal</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3ordinal/actions"><img src="https://github.com/mlr-org/mlr3ordinal/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3ordinal"><img src="https://www.r-pkg.org/badges/version-ago/mlr3ordinal" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3ordinal.html"><img src="https://cranchecks.info/badges/summary/mlr3ordinal" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3proba">mlr3proba</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/mlr3proba/actions"><img src="https://github.com/mlr-org/mlr3proba/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=mlr3proba"><img src="https://www.r-pkg.org/badges/version-ago/mlr3proba" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_mlr3proba.html"><img src="https://cranchecks.info/badges/summary/mlr3proba" alt="CRAN Checks" /></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://github.com/mlr-org/paradox">paradox</a></td>
-<td style="text-align: left;"><a href="https://github.com/mlr-org/paradox/actions"><img src="https://github.com/mlr-org/paradox/workflows/tic/badge.svg" alt="R build status" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/package=paradox"><img src="https://www.r-pkg.org/badges/version-ago/paradox" alt="CRAN" /></a></td>
-<td style="text-align: left;"><a href="https://cran.r-project.org/web/checks/check_results_paradox.html"><img src="https://cranchecks.info/badges/summary/paradox" alt="CRAN Checks" /></a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="core"><i class="bi-house-heart"></i> Core</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3">mlr3</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Basic building blocks for machine learning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3verse">mlr3verse</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Meta-package for installing and using core mlr3 packages.
+</div>
+</div>
+<h2 id="optimization"><i class="bi-toggles"></i> Optimization</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/bbotk">bbotk</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Black-box optimization toolkit.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/paradox">paradox</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Universal parameter space description and tools.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3tuning">mlr3tuning</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Hyperparameter tuning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3hyperband">mlr3hyperband</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Adds hyperband optimization to mlr3tuning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3mbo">mlr3mbo</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Adds model-based optimization to mlr3tuning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/miesmuschel">miesmuschel</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Adds flexible mixed integer evolutionary strategies.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3tuningspaces">mlr3tuningspaces</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Collection of search spaces for hyperparameter tuning.
+</div>
+</div>
+<h2 id="feature-selection"><i class="bi-funnel"></i> Feature Selection</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3filters">mlr3filters</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Filter feature selection.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3fselect">mlr3fselect</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Wrapper feature selection.
+</div>
+</div>
+<h2 id="data"><i class="bi-hdd"></i> Data</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3db">mlr3db</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Data backend to transparently work with databases.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3oml">mlr3oml</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Connector to OpenML.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3data">mlr3data</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Additional data sets and tasks.
+</div>
+</div>
+<h2 id="learners"><i class="bi-pen"></i> Learners</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3learners">mlr3learners</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Essential learners for mlr3, maintained by the mlr-org team.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3extralearners">mlr3extralearners</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Extra learners for mlr3, implemented by the community.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3keras">mlr3keras</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Deep learning via keras.
+</div>
+</div>
+<h2 id="visualization"><i class="bi-bar-chart-line"></i> Visualization</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3viz">mlr3viz</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Visualizations for tasks, predictions, resample results and benchmarks.
+</div>
+</div>
+<h2 id="pipelines"><i class="bi-share"></i> Pipelines</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3pipelines">mlr3pipelines</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Dataflow programming toolkit.
+</div>
+</div>
+<h2 id="tasks"><i class="bi-list-task"></i> Tasks</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3spatiotempcv">mlr3spatiotempcv</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Spatiotemporal resampling and visualization methods.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3cluster">mlr3cluster</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Cluster analysis.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3proba">mlr3proba</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Toolkit for making probabilistic predictions.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3ordinal">mlr3ordinal</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Ordinal regression.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3multioutput">mlr3multioutput</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Storing and working with multi-output tasks.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3temporal">mlr3temporal</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Time series analysis.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3spatial">mlr3spatial</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Methods for spatial objects.
+</div>
+</div>
+<h2 id="utilities"><i class="bi-balloon"></i> Utilities</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3misc">mlr3misc</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Miscellaneous helper functions.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3measures">mlr3measures</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Performance measures for supervised learning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3benchmark">mlr3benchmark</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Analysis and tools for benchmarking.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3fairness">mlr3fairness</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Machine learning fairness.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3batchmark">mlr3batchmark</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Connector between mlr3 and batchtools.
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

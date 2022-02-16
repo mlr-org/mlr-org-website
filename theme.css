@@ -87,7 +87,7 @@ d-appendix {
 }
 
 
-/* Feature grid on main page */
+/* Feature grid */
 .grid-container {
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
@@ -139,14 +139,64 @@ a.btn i {
 
 /* Headings */
 h1 {
-  font-size: 36px;
+  font-size: 2.5rem !important;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 2rem !important;
 }
+
+h3 {
+  font-size: 1.2rem !important;
+}
+
 
 /* Allow horizontal scroll in citation box */
 .citation {
   overflow-x: auto !important;
 }
+
+/* Package grid */
+.grid-container-package {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-bottom: 30px;
+}
+
+.grid-item-package {
+  text-align: left;
+  padding: 10px;
+  background-color: #f1f1f1;
+} 
+
+.grid-item-package:hover {
+  background-color: #cccccc;
+} 
+
+div.grid-item-package h3 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+div.grid-item-package a {
+  border-bottom: 0px;
+  text-decoration: none;
+}
+
+div.grid-item-package i {
+  font-size: 0.75rem;
+  margin-left: 10px;
+}
+
+i.status-stable {
+  color: #B4CFB0;
+}
+
+i.status-maturing {
+  color: #FBC6A4;
+}
+
+
