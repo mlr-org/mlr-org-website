@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-1.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-2.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-3.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-4.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-8-1.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-9-1.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-9-2.png"]}
+  {"type":"character","attributes":{},"value":["introducing-mlr3cluster-cluster-analysis-package_files/anchor-4.2.2/anchor.min.js","introducing-mlr3cluster-cluster-analysis-package_files/bowser-1.9.3/bowser.min.js","introducing-mlr3cluster-cluster-analysis-package_files/distill-2.2.21/template.v2.js","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-1.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-2.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-3.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-4.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-8-1.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-9-1.png","introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-9-2.png","introducing-mlr3cluster-cluster-analysis-package_files/header-attrs-2.11/header-attrs.js","introducing-mlr3cluster-cluster-analysis-package_files/jquery-3.6.0/jquery-3.6.0.js","introducing-mlr3cluster-cluster-analysis-package_files/jquery-3.6.0/jquery-3.6.0.min.js","introducing-mlr3cluster-cluster-analysis-package_files/jquery-3.6.0/jquery-3.6.0.min.map","introducing-mlr3cluster-cluster-analysis-package_files/popper-2.6.0/popper.min.js","introducing-mlr3cluster-cluster-analysis-package_files/tippy-6.2.7/tippy-bundle.umd.min.js","introducing-mlr3cluster-cluster-analysis-package_files/tippy-6.2.7/tippy-light-border.css","introducing-mlr3cluster-cluster-analysis-package_files/tippy-6.2.7/tippy.css","introducing-mlr3cluster-cluster-analysis-package_files/tippy-6.2.7/tippy.umd.min.js","introducing-mlr3cluster-cluster-analysis-package_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1643,13 +1643,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>&lt;PredictionClust&gt; for 10 observations:
     row_ids partition
-          1         1
-          6         1
-         11         2
+          3         2
+          4         2
+         10         2
 ---                  
-         38         2
-         46         2
-         47         2</code></pre>
+         32         2
+         48         1
+         50         1</code></pre>
 </div>
 <h2 id="benchmarking-and-evaluation">Benchmarking and Evaluation</h2>
 <p>To assess the quality of any machine learning experiment, you need to choose an evaluation metric that makes the most sense. Let’s design an experiment that will allow you to compare the performance of three different clusteres on the same task. The mlr3 library provides benchmarking functionality that lets you create such experiments.</p>
@@ -1658,19 +1658,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 1: &lt;TaskClust[45]&gt; &lt;LearnerClustKMeans[37]&gt; &lt;ResamplingHoldout[19]&gt;
 2: &lt;TaskClust[45]&gt;    &lt;LearnerClustPAM[37]&gt; &lt;ResamplingHoldout[19]&gt;
 3: &lt;TaskClust[45]&gt; &lt;LearnerClustCMeans[37]&gt; &lt;ResamplingHoldout[19]&gt;</code></pre>
-<pre><code>INFO  [09:55:04.812] [mlr3] Running benchmark with 3 resampling iterations 
-INFO  [09:55:05.173] [mlr3] Applying learner &#39;clust.pam&#39; on task &#39;usarrests&#39; (iter 1/1) 
-INFO  [09:55:05.639] [mlr3] Applying learner &#39;clust.cmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
-INFO  [09:55:05.773] [mlr3] Applying learner &#39;clust.kmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
-INFO  [09:55:05.830] [mlr3] Finished benchmark </code></pre>
+<pre><code>INFO  [17:52:14.149] [mlr3] Running benchmark with 3 resampling iterations 
+INFO  [17:52:14.270] [mlr3] Applying learner &#39;clust.pam&#39; on task &#39;usarrests&#39; (iter 1/1) 
+INFO  [17:52:14.381] [mlr3] Applying learner &#39;clust.kmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
+INFO  [17:52:14.399] [mlr3] Applying learner &#39;clust.cmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
+INFO  [17:52:14.435] [mlr3] Finished benchmark </code></pre>
 <pre><code>   nr      resample_result   task_id   learner_id resampling_id iters
 1:  1 &lt;ResampleResult[22]&gt; usarrests clust.kmeans       holdout     1
 2:  2 &lt;ResampleResult[22]&gt; usarrests    clust.pam       holdout     1
 3:  3 &lt;ResampleResult[22]&gt; usarrests clust.cmeans       holdout     1
    clust.silhouette
-1:              NaN
-2:        0.4760311
-3:              NaN</code></pre>
+1:        0.5595501
+2:        0.5595501
+3:        0.5595501</code></pre>
 </div>
 <h2 id="visualization">Visualization</h2>
 <p>How do you visualize clustering tasks and results? The <code>mlr3viz</code> package (version &gt;= 0.40) now provides that functionality.</p>

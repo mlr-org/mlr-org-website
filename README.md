@@ -23,4 +23,3 @@ Merged post are published via GitHub Pages.
 * The files in `docs/` are the standalone static website which is published with GitHub Pages.
 Changes in `docs/` are overwritten by `rmarkdown::render_site()`.
 * See [rstudio.github.io/distill](https://rstudio.github.io/distill/) to learn more about Distill.
-
