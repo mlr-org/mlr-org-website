@@ -1,10 +1,15 @@
-name: "."
+name: "mlr-org-website"
 title: "mlr-org"
 theme: theme.css
 favicon: images/favicon.ico
 description: |
-  mlr-web
+  Website of mlr3 - Machine Learning in R.
 output_dir: "docs"
+base_url: https://mlr-org.com/
+rss:
+  full_content: true
+  categories:
+    - R
 navbar:
   logo:
     image: images/logo.png

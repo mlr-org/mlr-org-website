@@ -91,6 +91,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <meta property="description" itemprop="description" content="We are happy to announce that mlr3spatial has been released on CRAN in November 2021."/>
 
+<link rel="canonical" href="https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/"/>
 <link rel="icon" type="image/vnd.microsoft.icon" href="../../images/favicon.ico"/>
 
 <!--  https://schema.org/Article -->
@@ -103,19 +104,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="og:title" content="mlr-org: Announcing mlr3spatial"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="We are happy to announce that mlr3spatial has been released on CRAN in November 2021."/>
+<meta property="og:url" content="https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/"/>
+<meta property="og:image" content="https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/announcing-mlr3spatial_files/figure-html5/mlr3spatial-006-1.png"/>
+<meta property="og:image:width" content="1248"/>
+<meta property="og:image:height" content="768"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="mlr-org"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary"/>
+<meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="mlr-org: Announcing mlr3spatial"/>
 <meta property="twitter:description" content="We are happy to announce that mlr3spatial has been released on CRAN in November 2021."/>
+<meta property="twitter:url" content="https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/"/>
+<meta property="twitter:image" content="https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/announcing-mlr3spatial_files/figure-html5/mlr3spatial-006-1.png"/>
+<meta property="twitter:image:width" content="1248"/>
+<meta property="twitter:image:height" content="768"/>
 
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="mlr-org: Announcing mlr3spatial"/>
+<meta name="citation_fulltext_html_url" content="https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/"/>
+<meta name="citation_online_date" content="2021/12/01"/>
+<meta name="citation_publication_date" content="2021/12/01"/>
+<meta name="citation_author" content="Marc Becker"/>
+<meta name="citation_author" content="Patrick Schratz"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Announcing mlr3spatial"]},{"type":"character","attributes":{},"value":["We are happy to announce that mlr3spatial has been released on CRAN in November 2021."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Marc Becker"]},{"type":"character","attributes":{},"value":["https://github.com/be-marc"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Patrick Schratz"]},{"type":"character","attributes":{},"value":["https://github.com/pat-s"]}]}]},{"type":"character","attributes":{},"value":["2021-12-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Announcing mlr3spatial"]},{"type":"character","attributes":{},"value":["We are happy to announce that mlr3spatial has been released on CRAN in November 2021."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Marc Becker"]},{"type":"character","attributes":{},"value":["https://github.com/be-marc"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Patrick Schratz"]},{"type":"character","attributes":{},"value":["https://github.com/pat-s"]}]}]},{"type":"character","attributes":{},"value":["2021-12-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/"]},{"type":"character","attributes":{},"value":["https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2594,8 +2610,8 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 <p>For large raster files with millions of values it helps to predict in parallel. To enable this, set <code>learner$parallel_predict = TRUE</code> and initiate a parallel plan via {future}, e.g. via <code>plan("multisession")</code>. Since this is only an example, parallelization is not enabled here. Here we will use a simple regression tree as an example learner. In practice you might want to use a different learner - you can find an overview of available learners <a href="https://mlr3extralearners.mlr-org.com/articles/learners/list_learners.html">here</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>INFO  [11:41:05.059] 2046 
-INFO  [11:41:05.110] 2046 </code></pre>
+<pre><code>INFO  [17:51:31.814] 4546 
+INFO  [17:51:31.872] 4546 </code></pre>
 <pre><code>&lt;LearnerRegrRpart:regr.rpart&gt;
 * Model: rpart
 * Parameters: xval=0
@@ -2607,12 +2623,12 @@ INFO  [11:41:05.110] 2046 </code></pre>
 <h3 id="prediction">Prediction</h3>
 <p>For prediction <code>predict_spatial()</code> is used. It will return a raster file which contains the predictions. Users can select which R spatial format the returned raster should have. Note that by default <code>mlr3spatial</code> operates with <code>SpatRaster</code> objects from package <code>terra</code>. If a different output format is requested (e.g. <code>"stars"</code>), coercion is happening in the background which might take some time.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>INFO  [11:41:05.440] Start raster prediction 
-INFO  [11:41:05.444] Prediction is executed with a chunksize of 200, 1 chunk(s) in total, 122848 values per chunk 
-INFO  [11:41:05.502] 2021 
-INFO  [11:41:05.787] 2010 
-INFO  [11:41:05.795] Chunk 1 of 1 finished 
-INFO  [11:41:05.808] Finished raster prediction in 0 seconds </code></pre>
+<pre><code>INFO  [17:51:32.251] Start raster prediction 
+INFO  [17:51:32.255] Prediction is executed with a chunksize of 200, 1 chunk(s) in total, 122848 values per chunk 
+INFO  [17:51:32.325] 4511 
+INFO  [17:51:32.577] 4491 
+INFO  [17:51:32.583] Chunk 1 of 1 finished 
+INFO  [17:51:32.596] Finished raster prediction in 0 seconds </code></pre>
 <pre><code>stars object with 2 dimensions and 1 attribute
 attribute(s):
             Min.  1st Qu.   Median     Mean 3rd Qu.     Max.
@@ -2639,7 +2655,18 @@ y    1 352 9120761 -28.5 SIRGAS 2000 / UTM zone 25S FALSE   NULL [y]</code></pre
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">Becker &amp; Schratz (2021, Dec. 1). mlr-org: Announcing mlr3spatial. Retrieved from https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{becker2021announcing,
+  author = {Becker, Marc and Schratz, Patrick},
+  title = {mlr-org: Announcing mlr3spatial},
+  url = {https://mlr-org.com/posts/2021-12-01-announcing-mlr3spatial/},
+  year = {2021}
+}</pre>
+</div>
 <!--/radix_placeholder_appendices-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <!--radix_placeholder_navigation_after_body--><html><body>
