@@ -1,6 +1,10 @@
 ---
 title: "Machine Learning in R"
 site: distill::distill_website
+output:
+    distill::distill_article:
+      includes:
+        in_header: assets/header.html
 ---
 
 Efficient, object-oriented programming on the building blocks of machine learning.
@@ -29,7 +33,7 @@ Efficient, object-oriented programming on the building blocks of machine learnin
   <div class="grid-item">
   <div class="grid-icon"><i class="bi-share"></i></div>
   Dataflow programming with pipelines.</div>
-</div> 
+</div>
 
 <div class="btn-container">
 <a href="https://github.com/mlr-org/mlr3" class="btn"><i class="bi-github"></i> GitHub</a>
