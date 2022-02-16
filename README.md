@@ -1,6 +1,6 @@
 # mlr3 website
 
-The [mlr-org.com](https://mlr-org.com/) website is created with [Distill for R Markdown](https://rstudio.github.io/distill/website.html) and publish with github pages.
+The [mlr-org.com](https://mlr-org.com/) website is created with [Distill for R Markdown](https://rstudio.github.io/distill/website.html) and published with [GitHub Pages](https://docs.github.com/en/pages).
 
 ## How to add a new blog post
 
@@ -12,13 +12,15 @@ Place external images in the subdirectory.
 The website is created within the `docs/` directory. 
 Open `index.html` to check your post.
 4. Open a pull request and commit all changed files.
-Merged post are published via github pages.
+Merged post are published via GitHub Pages.
 
 ## How to change the website
 
-* Pages are `.Rmd` files located in the root directory. 
+* The website consists of pages and blog posts.
+* Pages are `.Rmd` files located in the root directory (e.g. `packages.Rmd`).
+* Blog posts are stored in `_post` and `blog.Rmd` automatically list them.
 * Change the style only in `theme.css` and add comments to all changes.
-* The files in `docs/` are the standalone static website which is published with github pages.
+* The files in `docs/` are the standalone static website which is published with GitHub Pages.
 Changes in `docs/` are overwritten by `rmarkdown::render_site()`.
 * See [rstudio.github.io/distill](https://rstudio.github.io/distill/) to learn more about Distill.
 
