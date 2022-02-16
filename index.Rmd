@@ -32,15 +32,21 @@ Efficient, object-oriented programming on the building blocks of machine learnin
 </div> 
 
 <div class="btn-container">
-<a href="https://github.com/mlr-org/mlr3" class="btn"><i class="bi-github btn-icon"></i> GitHub</a>
-<a href="https://mlr3gallery.mlr-org.com/" class="btn"><i class="bi-truck btn-icon"></i> Gallery</a>
-<a href="https://twitter.com/bbischl" class="btn"><i class="bi-twitter btn-icon"></i> Twitter</a>
-<a href="https://stackoverflow.com/questions/tagged/mlr3" class="btn"><i class="bi-stack btn-icon"></i> StackOverflow</a>
+<a href="https://github.com/mlr-org/mlr3" class="btn"><i class="bi-github"></i> GitHub</a>
+<a href="https://lmmisld-lmu-stats-slds.srv.mwn.de/mlr_invite/" class="btn"><i class="bi-chat-dots"></i> Mattermost</a>
+<a href="https://twitter.com/bbischl" class="btn"><i class="bi-twitter"></i> Twitter</a>
+<a href="https://stackoverflow.com/questions/tagged/mlr3" class="btn"><i class="bi-stack-overflow"></i> StackOverflow</a>
 </div>
 
-# Code Example
+# Quick Start
 
-## Basic
+The mlr3verse meta-package installs mlr3 and some of the most important extension packages:
+
+```{r, eval=FALSE}
+install.packages("mlr3verse")
+```
+
+### Basic Example
 
 ```{r, include=FALSE}
 set.seed(7832)
@@ -66,7 +72,7 @@ measure = msr("classif.acc")
 rr$score(measure)
 ```
 
-## Tuning
+### Tuning Example
 
 ```{r, eval=FALSE}
 library(mlr3tuning)
@@ -93,7 +99,7 @@ instance = tune(
 instance$result
 ```
 
-## Pipelines
+### Pipelines Example
 
 ```{r, eval=FALSE}
 library(mlr3)
@@ -118,3 +124,20 @@ graph_learner = as_learner(graph_stack)
 graph_learner$train(task)
 ```
 
+# Citing mlr3
+
+If you use `mlr3`, please cite our JOSS article:
+
+<div class="citation">
+```
+@Article{mlr3,
+  title = {{mlr3}: A modern object-oriented machine learning framework in {R}},
+  author = {Michel Lang and Martin Binder and Jakob Richter and Patrick Schratz and Florian Pfisterer and Stefan Coors and Quay Au and Giuseppe Casalicchio and Lars Kotthoff and Bernd Bischl},
+  journal = {Journal of Open Source Software},
+  year = {2019},
+  month = {dec},
+  doi = {10.21105/joss.01903},
+  url = {https://joss.theoj.org/papers/10.21105/joss.01903},
+}
+```
+</div>

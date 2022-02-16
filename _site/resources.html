@@ -2193,6 +2193,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-align:         left;
   }
 
+  /* Increase logo size */
+  .distill-site-header .logo img {
+    max-height:         30px;
+    margin-bottom:      -6px
+  }
+
+
   /* Feature grid on main page */
   .grid-container {
     display: inline-grid;
@@ -2208,11 +2215,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-bottom: 15px;
   }
 
-  .icon {
+  div.grid-icon i {
     font-size: 3rem;
   }
 
   /* Style buttons */
+  .btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
   .btn {
     background-color: #455a64;
     border: none;
@@ -2232,21 +2245,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   } 
 
   /* Button icons */
-  .btn-icon {
+  a.btn i {
     font-size: 2rem;
     margin-right: 10px;
   }
 
-  .btn-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  /* Headings */
+  h1 {
+    font-size: 36px;
   }
 
-  /* Increase logo size */
-  .distill-site-header .logo img {
-    max-height: 30px;
-    margin-bottom: -6px
+  h2 {
+    font-size: 24px;
+  }
+
+  /* Allow horizontal scroll in citation box */
+  .citation {
+    overflow-x: auto !important;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2442,6 +2457,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="blog.html">Blog</a>
 <a href="packages.html">Packages</a>
 <a href="resources.html">Resources</a>
+<a href="https://mlr3book.mlr-org.com/">Book</a>
 <a href="https://mlr3gallery.mlr-org.com/">Gallery</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>

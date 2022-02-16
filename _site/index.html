@@ -2193,6 +2193,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-align:         left;
   }
 
+  /* Increase logo size */
+  .distill-site-header .logo img {
+    max-height:         30px;
+    margin-bottom:      -6px
+  }
+
+
   /* Feature grid on main page */
   .grid-container {
     display: inline-grid;
@@ -2208,11 +2215,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-bottom: 15px;
   }
 
-  .icon {
+  div.grid-icon i {
     font-size: 3rem;
   }
 
   /* Style buttons */
+  .btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
   .btn {
     background-color: #455a64;
     border: none;
@@ -2232,21 +2245,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   } 
 
   /* Button icons */
-  .btn-icon {
+  a.btn i {
     font-size: 2rem;
     margin-right: 10px;
   }
 
-  .btn-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  /* Headings */
+  h1 {
+    font-size: 36px;
   }
 
-  /* Increase logo size */
-  .distill-site-header .logo img {
-    max-height: 30px;
-    margin-bottom: -6px
+  h2 {
+    font-size: 24px;
+  }
+
+  /* Allow horizontal scroll in citation box */
+  .citation {
+    overflow-x: auto !important;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2442,6 +2457,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="blog.html">Blog</a>
 <a href="packages.html">Packages</a>
 <a href="resources.html">Resources</a>
+<a href="https://mlr3book.mlr-org.com/">Book</a>
 <a href="https://mlr3gallery.mlr-org.com/">Gallery</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -2500,10 +2516,17 @@ Dataflow programming with pipelines.
 </div>
 </div>
 <div class="btn-container">
-<p><a href="https://github.com/mlr-org/mlr3" class="btn"><i class="bi-github btn-icon"></i> GitHub</a> <a href="https://mlr3gallery.mlr-org.com/" class="btn"><i class="bi-truck btn-icon"></i> Gallery</a> <a href="https://twitter.com/bbischl" class="btn"><i class="bi-twitter btn-icon"></i> Twitter</a> <a href="https://stackoverflow.com/questions/tagged/mlr3" class="btn"><i class="bi-stack btn-icon"></i> StackOverflow</a></p>
+<p><a href="https://github.com/mlr-org/mlr3" class="btn"><i class="bi-github"></i> GitHub</a> <a href="https://lmmisld-lmu-stats-slds.srv.mwn.de/mlr_invite/" class="btn"><i class="bi-chat-dots"></i> Mattermost</a> <a href="https://twitter.com/bbischl" class="btn"><i class="bi-twitter"></i> Twitter</a> <a href="https://stackoverflow.com/questions/tagged/mlr3" class="btn"><i class="bi-stack-overflow"></i> StackOverflow</a></p>
 </div>
-<h1 id="code-example">Code Example</h1>
-<h2 id="basic">Basic</h2>
+<h1 id="quick-start">Quick Start</h1>
+<p>The mlr3verse meta-package installs mlr3 and some of the most important extension packages:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"mlr3verse"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="basic-example">Basic Example</h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mlr3.mlr-org.com'>mlr3</a></span><span class='op'>)</span>
@@ -2524,7 +2547,7 @@ Dataflow programming with pipelines.
 </code></pre>
 </div>
 </div>
-<h2 id="tuning">Tuning</h2>
+<h3 id="tuning-example">Tuning Example</h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mlr3tuning.mlr-org.com'>mlr3tuning</a></span><span class='op'>)</span>
@@ -2552,7 +2575,7 @@ Dataflow programming with pipelines.
 </code></pre>
 </div>
 </div>
-<h2 id="pipelines">Pipelines</h2>
+<h3 id="pipelines-example">Pipelines Example</h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mlr3.mlr-org.com'>mlr3</a></span><span class='op'>)</span>
@@ -2578,7 +2601,20 @@ Dataflow programming with pipelines.
 </code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h1 id="citing-mlr3">Citing mlr3</h1>
+<p>If you use <code>mlr3</code>, please cite our JOSS article:</p>
+<div class="citation">
+<pre><code>@Article{mlr3,
+  title = {{mlr3}: A modern object-oriented machine learning framework in {R}},
+  author = {Michel Lang and Martin Binder and Jakob Richter and Patrick Schratz and Florian Pfisterer and Stefan Coors and Quay Au and Giuseppe Casalicchio and Lars Kotthoff and Bernd Bischl},
+  journal = {Journal of Open Source Software},
+  year = {2019},
+  month = {dec},
+  doi = {10.21105/joss.01903},
+  url = {https://joss.theoj.org/papers/10.21105/joss.01903},
+}</code></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
