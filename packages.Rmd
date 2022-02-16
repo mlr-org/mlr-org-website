@@ -51,6 +51,10 @@ knitr::opts_chunk$set(echo = FALSE)
   <h3><a href="https://github.com/mlr-org/mlr3tuningspaces">mlr3tuningspaces</a> <i class="bi-circle-fill status-stable"></i></h3>
   Collection of search spaces for hyperparameter tuning.
   </div>
+  <div class="grid-item-package">
+  <h3><a href="https://github.com/mlr-org/mlr3automl">mlr3automl</a> <i class="bi-circle-fill status-maturing"></i></h3>
+  Automated Machine Learning.
+  </div>
 </div> 
 
 ## <i class="bi-funnel"></i> Feature Selection

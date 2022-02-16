@@ -266,13 +266,13 @@ preds = learner$predict(task, row_ids = test_set)
 preds&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;PredictionClust&amp;gt; for 10 observations:
     row_ids partition
-          3         1
-          8         1
-         13         1
+          9         1
+         15         2
+         20         1
 ---                  
-         30         2
-         39         2
-         44         2&lt;/code&gt;&lt;/pre&gt;
+         34         2
+         36         2
+         39         2&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="benchmarking-and-evaluation"&gt;Benchmarking and Evaluation&lt;/h2&gt;
 &lt;p&gt;To assess the quality of any machine learning experiment, you need to choose an evaluation metric that makes the most sense. Let’s design an experiment that will allow you to compare the performance of three different clusteres on the same task. The mlr3 library provides benchmarking functionality that lets you create such experiments.&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;# design an experiment by specifying task(s), learner(s), resampling method(s)
@@ -290,11 +290,11 @@ print(design)&lt;/code&gt;&lt;/pre&gt;
 3: &amp;lt;TaskClust[45]&amp;gt; &amp;lt;LearnerClustCMeans[37]&amp;gt; &amp;lt;ResamplingHoldout[19]&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class="r"&gt;&lt;code&gt;# execute benchmark
 bmr = benchmark(design)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;INFO  [21:02:13.686] [mlr3] Running benchmark with 3 resampling iterations 
-INFO  [21:02:13.771] [mlr3] Applying learner &amp;#39;clust.cmeans&amp;#39; on task &amp;#39;usarrests&amp;#39; (iter 1/1) 
-INFO  [21:02:13.906] [mlr3] Applying learner &amp;#39;clust.kmeans&amp;#39; on task &amp;#39;usarrests&amp;#39; (iter 1/1) 
-INFO  [21:02:13.921] [mlr3] Applying learner &amp;#39;clust.pam&amp;#39; on task &amp;#39;usarrests&amp;#39; (iter 1/1) 
-INFO  [21:02:13.938] [mlr3] Finished benchmark &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;INFO  [21:04:15.111] [mlr3] Running benchmark with 3 resampling iterations 
+INFO  [21:04:15.190] [mlr3] Applying learner &amp;#39;clust.kmeans&amp;#39; on task &amp;#39;usarrests&amp;#39; (iter 1/1) 
+INFO  [21:04:15.312] [mlr3] Applying learner &amp;#39;clust.pam&amp;#39; on task &amp;#39;usarrests&amp;#39; (iter 1/1) 
+INFO  [21:04:15.322] [mlr3] Applying learner &amp;#39;clust.cmeans&amp;#39; on task &amp;#39;usarrests&amp;#39; (iter 1/1) 
+INFO  [21:04:15.351] [mlr3] Finished benchmark &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class="r"&gt;&lt;code&gt;# define measure
 measures = list(msr(&amp;quot;clust.silhouette&amp;quot;))
 
@@ -304,9 +304,9 @@ bmr$aggregate(measures)&lt;/code&gt;&lt;/pre&gt;
 2:  2 &amp;lt;ResampleResult[22]&amp;gt; usarrests    clust.pam       holdout     1
 3:  3 &amp;lt;ResampleResult[22]&amp;gt; usarrests clust.cmeans       holdout     1
    clust.silhouette
-1:        0.5517208
-2:        0.4103847
-3:        0.4352533&lt;/code&gt;&lt;/pre&gt;
+1:        0.5398911
+2:        0.5324310
+3:        0.5324310&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="visualization"&gt;Visualization&lt;/h2&gt;
 &lt;p&gt;How do you visualize clustering tasks and results? The &lt;code&gt;mlr3viz&lt;/code&gt; package (version &amp;gt;= 0.40) now provides that functionality.&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;install.packages(&amp;quot;mlr3viz&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -320,19 +320,19 @@ preds = learner$predict(task)
 
 # Task visualization
 autoplot(task)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="filee725c7cadd870_files/figure-html/unnamed-chunk-7-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="filee739c1d92b07d_files/figure-html/unnamed-chunk-7-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;# Pairs plot with cluster assignments
 autoplot(preds, task)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="filee725c7cadd870_files/figure-html/unnamed-chunk-7-2.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="filee739c1d92b07d_files/figure-html/unnamed-chunk-7-2.png" width="672" /&gt;&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;# Silhouette plot with mean silhouette value as reference line
 autoplot(preds, task, type = &amp;quot;sil&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="filee725c7cadd870_files/figure-html/unnamed-chunk-7-3.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="filee739c1d92b07d_files/figure-html/unnamed-chunk-7-3.png" width="672" /&gt;&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;# Performing PCA on task data and showing cluster assignments
 autoplot(preds, task, type = &amp;quot;pca&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="filee725c7cadd870_files/figure-html/unnamed-chunk-7-4.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="filee739c1d92b07d_files/figure-html/unnamed-chunk-7-4.png" width="672" /&gt;&lt;/p&gt;
 &lt;p&gt;Keep in mind that &lt;code&gt;mlr3viz::autoplot&lt;/code&gt; also provides more options depending on the kind of plots you’re interested in. For example, to draw borders around clusters, provide appropriate parameters from &lt;code&gt;ggfortify::autoplot.kmeans&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;autoplot(preds, task, type = &amp;quot;pca&amp;quot;, frame = TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="filee725c7cadd870_files/figure-html/unnamed-chunk-8-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="filee739c1d92b07d_files/figure-html/unnamed-chunk-8-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;p&gt;You can also easily visualize dendrograms:&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;task = mlr_tasks$get(&amp;quot;usarrests&amp;quot;)
 learner = mlr_learners$get(&amp;quot;clust.agnes&amp;quot;)
@@ -340,12 +340,12 @@ learner$train(task)
 
 # Simple dendrogram
 autoplot(learner)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="filee725c7cadd870_files/figure-html/unnamed-chunk-9-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="filee739c1d92b07d_files/figure-html/unnamed-chunk-9-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;pre class="r"&gt;&lt;code&gt;# More advanced options from `factoextra::fviz_dend`
 autoplot(learner,
   k = learner$param_set$values$k, rect_fill = TRUE,
   rect = TRUE, rect_border = c(&amp;quot;red&amp;quot;, &amp;quot;cyan&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src="filee725c7cadd870_files/figure-html/unnamed-chunk-9-2.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="filee739c1d92b07d_files/figure-html/unnamed-chunk-9-2.png" width="672" /&gt;&lt;/p&gt;
 &lt;h2 id="further-development"&gt;Further Development&lt;/h2&gt;
 &lt;p&gt;If you have any issues with the package or would like to request a new feature, feel free to open an issue &lt;a href="https://github.com/mlr-org/mlr3cluster/issues"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="acknowledgements"&gt;Acknowledgements&lt;/h2&gt;
@@ -359,7 +359,7 @@ autoplot(learner,
       <media:content url="https://mlr-org.com/posts/2020-08-26-introducing-mlr3cluster-cluster-analysis-package/introducing-mlr3cluster-cluster-analysis-package_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
-      <title>useR 2020 tutorial on mlr3, mlr3tuning and pipelines</title>
+      <title>useR 2020 Tutorial on mlr3, mlr3tuning and mlr3pipelines</title>
       <dc:creator>Marc Becker</dc:creator>
       <link>https://mlr-org.com/posts/2020-08-04-user-2020-tutorial-on-mlr3-mlr3tuning-and-pipelines</link>
       <description>
