@@ -6,6 +6,9 @@ author:
   - name: Damir Pulatov
     url: https://github.com/damirpolat
 date: 2020-08-26
+categories:
+    - R
+    - CRAN
 output:
   distill::distill_article:
     self_contained: false
@@ -33,7 +36,7 @@ See chapters 1-2 of the [mlr3book](https://mlr3book.mlr-org.com/) if you need a 
 ## Installation
 To install the package, run the following code chunk:
 
-```{r echo = TRUE, results = FALSE, message = FALSE, warning = FALSE}
+```{r, eval=FALSE}
 install.packages("mlr3cluster")
 ```
 
