@@ -4,7 +4,7 @@ theme: theme.css
 favicon: images/favicon.ico
 description: |
   mlr-web
-output_dir: "_site"
+output_dir: "docs"
 navbar:
   logo:
     image: images/logo.png
