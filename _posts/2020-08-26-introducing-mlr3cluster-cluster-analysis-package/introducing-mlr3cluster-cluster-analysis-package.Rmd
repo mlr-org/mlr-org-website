@@ -14,11 +14,6 @@ output:
     self_contained: false
 ---
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
 Tired of learning to use multiple packages to access clustering algorithms? 
 
 Using different packages makes it difficult to compare the performance of clusterers?
@@ -174,7 +169,7 @@ bmr$aggregate(measures)
 How do you visualize clustering tasks and results? 
 The `mlr3viz` package (version >= 0.40) now provides that functionality.   
 
-```{r echo = TRUE, results = FALSE, message = FALSE, warning = FALSE}
+```{r, eval=FALSE}
 install.packages("mlr3viz")
 ```
 
@@ -229,5 +224,3 @@ If you have any issues with the package or would like to request a new feature, 
 
 ## Acknowledgements
 I would like to thank the following people for their help and guidance: Michel Lang, Lars Kotthoff, Martin Binder, Patrick Schratz, Bernd Bischl. 
-
-

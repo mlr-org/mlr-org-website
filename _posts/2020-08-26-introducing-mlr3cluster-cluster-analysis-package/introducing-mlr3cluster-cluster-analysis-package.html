@@ -1503,6 +1503,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="getting-started">Getting Started</h2>
 <p>Assuming you know all the basics and you’ve installed the package, here’s an example on how to perform k-means clustering on a classic <a href="https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/USArrests.html">usarrests</a> data set:</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mlr3.mlr-org.com'>mlr3</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mlr3cluster.mlr-org.com'>mlr3cluster</a></span><span class='op'>)</span>
+
+<span class='va'>task</span> <span class='op'>=</span> <span class='va'>mlr_tasks</span><span class='op'>$</span><span class='fu'>get</span><span class='op'>(</span><span class='st'>"usarrests"</span><span class='op'>)</span>
+<span class='va'>learner</span> <span class='op'>=</span> <span class='va'>mlr_learners</span><span class='op'>$</span><span class='fu'>get</span><span class='op'>(</span><span class='st'>"clust.kmeans"</span><span class='op'>)</span>
+<span class='va'>learner</span><span class='op'>$</span><span class='fu'>train</span><span class='op'>(</span><span class='va'>task</span><span class='op'>)</span>
+<span class='va'>preds</span> <span class='op'>=</span> <span class='va'>learner</span><span class='op'>$</span><span class='fu'>predict</span><span class='op'>(</span>task <span class='op'>=</span> <span class='va'>task</span><span class='op'>)</span>
+
+<span class='va'>preds</span>
+</code></pre>
+</div>
 <pre><code>&lt;PredictionClust&gt; for 50 observations:
     row_ids partition
           1         2
@@ -1516,6 +1528,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="integrated-learners">Integrated Learners</h2>
 <p>What built-in clusterers does the package come with? Here is a list of integrated learners:</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>mlr_learners</span><span class='op'>$</span><span class='fu'>keys</span><span class='op'>(</span><span class='st'>"clust"</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code> [1] &quot;clust.agnes&quot;        &quot;clust.ap&quot;           &quot;clust.cmeans&quot;      
  [4] &quot;clust.cobweb&quot;       &quot;clust.dbscan&quot;       &quot;clust.diana&quot;       
  [7] &quot;clust.em&quot;           &quot;clust.fanny&quot;        &quot;clust.featureless&quot; 
@@ -1583,6 +1599,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="integrated-measures">Integrated Measures</h2>
 <p>List of integrated cluster measures:</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>mlr_measures</span><span class='op'>$</span><span class='fu'>keys</span><span class='op'>(</span><span class='st'>"clust"</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code>[1] &quot;clust.ch&quot;         &quot;clust.db&quot;         &quot;clust.dunn&quot;      
 [4] &quot;clust.silhouette&quot; &quot;clust.wss&quot;       </code></pre>
 </div>
@@ -1621,6 +1641,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="integrated-tasks">Integrated Tasks</h2>
 <p>There is only one built-in Task in the package:</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>mlr_tasks</span><span class='op'>$</span><span class='fu'>get</span><span class='op'>(</span><span class='st'>"usarrests"</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code>&lt;TaskClust:usarrests&gt; (50 x 4)
 * Target: -
 * Properties: -
@@ -1632,6 +1656,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="hyperparameters">Hyperparameters</h2>
 <p>Setting hyperparameters for clusterers is as easy as setting parameters for any other mlr3 learner:</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>task</span> <span class='op'>=</span> <span class='va'>mlr_tasks</span><span class='op'>$</span><span class='fu'>get</span><span class='op'>(</span><span class='st'>"usarrests"</span><span class='op'>)</span>
+<span class='va'>learner</span> <span class='op'>=</span> <span class='va'>mlr_learners</span><span class='op'>$</span><span class='fu'>get</span><span class='op'>(</span><span class='st'>"clust.kmeans"</span><span class='op'>)</span>
+<span class='va'>learner</span><span class='op'>$</span><span class='va'>param_set</span>
+</code></pre>
+</div>
 <pre><code>&lt;ParamSet&gt;
           id    class lower upper nlevels       default value
 1:   centers ParamUty    NA    NA     Inf             2     2
@@ -1639,42 +1669,82 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 3: algorithm ParamFct    NA    NA       4 Hartigan-Wong      
 4:    nstart ParamInt     1   Inf     Inf             1      
 5:     trace ParamInt     0   Inf     Inf             0      </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>learner</span><span class='op'>$</span><span class='va'>param_set</span><span class='op'>$</span><span class='va'>values</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>centers <span class='op'>=</span> <span class='fl'>3L</span>, algorithm <span class='op'>=</span> <span class='st'>"Lloyd"</span>, iter.max <span class='op'>=</span> <span class='fl'>100L</span><span class='op'>)</span>
+</code></pre>
+</div>
 </div>
 <h2 id="train-and-predict">Train and Predict</h2>
 <p>The “train” method is simply creating a model with cluster assignments for data, while the “predict” method’s functionality varies depending on the clusterer in question. Read the each learner’s documentation for details.</p>
 <p>For example, the <code>kmeans</code> learner’s predict method uses <code>clue::cl_predict</code> which performs cluster assignments for new data by looking at the “closest” neighbors of the new observations.</p>
 <p>Following the example from the previous section:</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>task</span> <span class='op'>=</span> <span class='va'>mlr_tasks</span><span class='op'>$</span><span class='fu'>get</span><span class='op'>(</span><span class='st'>"usarrests"</span><span class='op'>)</span>
+<span class='va'>train_set</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='va'>task</span><span class='op'>$</span><span class='va'>nrow</span>, <span class='fl'>0.8</span> <span class='op'>*</span> <span class='va'>task</span><span class='op'>$</span><span class='va'>nrow</span><span class='op'>)</span>
+<span class='va'>test_set</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>setdiff</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq_len</a></span><span class='op'>(</span><span class='va'>task</span><span class='op'>$</span><span class='va'>nrow</span><span class='op'>)</span>, <span class='va'>train_set</span><span class='op'>)</span>
+
+<span class='va'>learner</span> <span class='op'>=</span> <span class='va'>mlr_learners</span><span class='op'>$</span><span class='fu'>get</span><span class='op'>(</span><span class='st'>"clust.kmeans"</span><span class='op'>)</span>
+<span class='va'>learner</span><span class='op'>$</span><span class='fu'>train</span><span class='op'>(</span><span class='va'>task</span>, row_ids <span class='op'>=</span> <span class='va'>train_set</span><span class='op'>)</span>
+
+<span class='va'>preds</span> <span class='op'>=</span> <span class='va'>learner</span><span class='op'>$</span><span class='fu'>predict</span><span class='op'>(</span><span class='va'>task</span>, row_ids <span class='op'>=</span> <span class='va'>test_set</span><span class='op'>)</span>
+<span class='va'>preds</span>
+</code></pre>
+</div>
 <pre><code>&lt;PredictionClust&gt; for 10 observations:
     row_ids partition
-          1         1
-          8         1
-         13         1
+          1         2
+          4         1
+          6         2
 ---                  
-         36         2
-         41         2
-         46         2</code></pre>
+         38         1
+         47         1
+         48         1</code></pre>
 </div>
 <h2 id="benchmarking-and-evaluation">Benchmarking and Evaluation</h2>
 <p>To assess the quality of any machine learning experiment, you need to choose an evaluation metric that makes the most sense. Let’s design an experiment that will allow you to compare the performance of three different clusteres on the same task. The mlr3 library provides benchmarking functionality that lets you create such experiments.</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># design an experiment by specifying task(s), learner(s), resampling method(s)</span>
+<span class='va'>design</span> <span class='op'>=</span> <span class='fu'><a href='https://mlr3.mlr-org.com/reference/benchmark_grid.html'>benchmark_grid</a></span><span class='op'>(</span>
+  tasks <span class='op'>=</span> <span class='fu'><a href='https://mlr3.mlr-org.com/reference/mlr_sugar.html'>tsk</a></span><span class='op'>(</span><span class='st'>"usarrests"</span><span class='op'>)</span>,
+  learners <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+    <span class='fu'><a href='https://mlr3.mlr-org.com/reference/mlr_sugar.html'>lrn</a></span><span class='op'>(</span><span class='st'>"clust.kmeans"</span>, centers <span class='op'>=</span> <span class='fl'>3L</span><span class='op'>)</span>,
+    <span class='fu'><a href='https://mlr3.mlr-org.com/reference/mlr_sugar.html'>lrn</a></span><span class='op'>(</span><span class='st'>"clust.pam"</span>, k <span class='op'>=</span> <span class='fl'>3L</span><span class='op'>)</span>,
+    <span class='fu'><a href='https://mlr3.mlr-org.com/reference/mlr_sugar.html'>lrn</a></span><span class='op'>(</span><span class='st'>"clust.cmeans"</span>, centers <span class='op'>=</span> <span class='fl'>3L</span><span class='op'>)</span><span class='op'>)</span>,
+  resamplings <span class='op'>=</span> <span class='fu'><a href='https://mlr3.mlr-org.com/reference/mlr_sugar.html'>rsmp</a></span><span class='op'>(</span><span class='st'>"holdout"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>design</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code>              task                  learner              resampling
 1: &lt;TaskClust[45]&gt; &lt;LearnerClustKMeans[37]&gt; &lt;ResamplingHoldout[19]&gt;
 2: &lt;TaskClust[45]&gt;    &lt;LearnerClustPAM[37]&gt; &lt;ResamplingHoldout[19]&gt;
 3: &lt;TaskClust[45]&gt; &lt;LearnerClustCMeans[37]&gt; &lt;ResamplingHoldout[19]&gt;</code></pre>
-<pre><code>INFO  [20:53:40.749] [mlr3] Running benchmark with 3 resampling iterations 
-INFO  [20:53:40.836] [mlr3] Applying learner &#39;clust.pam&#39; on task &#39;usarrests&#39; (iter 1/1) 
-INFO  [20:53:40.959] [mlr3] Applying learner &#39;clust.kmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
-INFO  [20:53:40.969] [mlr3] Applying learner &#39;clust.cmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
-INFO  [20:53:41.008] [mlr3] Finished benchmark </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># execute benchmark</span>
+<span class='va'>bmr</span> <span class='op'>=</span> <span class='fu'><a href='https://mlr3.mlr-org.com/reference/benchmark.html'>benchmark</a></span><span class='op'>(</span><span class='va'>design</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>INFO  [20:59:47.643] [mlr3] Running benchmark with 3 resampling iterations 
+INFO  [20:59:47.757] [mlr3] Applying learner &#39;clust.pam&#39; on task &#39;usarrests&#39; (iter 1/1) 
+INFO  [20:59:47.950] [mlr3] Applying learner &#39;clust.kmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
+INFO  [20:59:47.965] [mlr3] Applying learner &#39;clust.cmeans&#39; on task &#39;usarrests&#39; (iter 1/1) 
+INFO  [20:59:48.016] [mlr3] Finished benchmark </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># define measure</span>
+<span class='va'>measures</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://mlr3.mlr-org.com/reference/mlr_sugar.html'>msr</a></span><span class='op'>(</span><span class='st'>"clust.silhouette"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>bmr</span><span class='op'>$</span><span class='fu'>aggregate</span><span class='op'>(</span><span class='va'>measures</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code>   nr      resample_result   task_id   learner_id resampling_id iters
 1:  1 &lt;ResampleResult[22]&gt; usarrests clust.kmeans       holdout     1
 2:  2 &lt;ResampleResult[22]&gt; usarrests    clust.pam       holdout     1
 3:  3 &lt;ResampleResult[22]&gt; usarrests clust.cmeans       holdout     1
    clust.silhouette
-1:        0.5637373
-2:        0.5637373
-3:        0.5183985</code></pre>
+1:        0.3638224
+2:        0.5577741
+3:        0.3638224</code></pre>
 </div>
 <h2 id="visualization">Visualization</h2>
 <p>How do you visualize clustering tasks and results? The <code>mlr3viz</code> package (version &gt;= 0.40) now provides that functionality.</p>

@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://mlr-org.com/</loc>
-    <lastmod>2022-02-16T20:03:49+01:00</lastmod>
+    <lastmod>2022-02-16T20:56:09+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.com/packages.html</loc>
@@ -46,6 +46,10 @@
   </url>
   <url>
     <loc>https://mlr-org.com/posts/2020-08-26-introducing-mlr3cluster-cluster-analysis-package/</loc>
-    <lastmod>2022-02-16T20:53:51+01:00</lastmod>
+    <lastmod>2022-02-16T20:59:55+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mlr-org.com/posts/2020-08-04-user-2020-tutorial-on-mlr3-mlr3tuning-and-pipelines/</loc>
+    <lastmod>2022-02-16T21:02:12+01:00</lastmod>
   </url>
 </urlset>

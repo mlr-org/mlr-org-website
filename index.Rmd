@@ -3,7 +3,9 @@ title: "Machine Learning in R"
 site: distill::distill_website
 ---
 
-Efficient, object-oriented programming on the building blocks of machine learning.
+An open-source machine learning framework providing a unified interface for 
+machine learning in the R language.
+
 
 <div class="grid-container">
   <div class="grid-item">
