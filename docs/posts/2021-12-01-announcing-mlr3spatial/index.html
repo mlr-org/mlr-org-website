@@ -2354,9 +2354,7 @@ i.status-stable {
 
 i.status-maturing {
   color: #FBC6A4;
-}
-
-</style>
+}</style>
 <style type="text/css">
 /* base style */
 
@@ -2601,8 +2599,8 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 <p>For large raster files with millions of values it helps to predict in parallel. To enable this, set <code>learner$parallel_predict = TRUE</code> and initiate a parallel plan via {future}, e.g. via <code>plan("multisession")</code>. Since this is only an example, parallelization is not enabled here. Here we will use a simple regression tree as an example learner. In practice you might want to use a different learner - you can find an overview of available learners <a href="https://mlr3extralearners.mlr-org.com/articles/learners/list_learners.html">here</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>INFO  [20:34:35.458] 2208 
-INFO  [20:34:35.509] 2208 </code></pre>
+<pre><code>INFO  [11:08:30.628] 2241 
+INFO  [11:08:30.679] 2241 </code></pre>
 <pre><code>&lt;LearnerRegrRpart:regr.rpart&gt;
 * Model: rpart
 * Parameters: xval=0
@@ -2614,12 +2612,12 @@ INFO  [20:34:35.509] 2208 </code></pre>
 <h3 id="prediction">Prediction</h3>
 <p>For prediction <code>predict_spatial()</code> is used. It will return a raster file which contains the predictions. Users can select which R spatial format the returned raster should have. Note that by default <code>mlr3spatial</code> operates with <code>SpatRaster</code> objects from package <code>terra</code>. If a different output format is requested (e.g. <code>"stars"</code>), coercion is happening in the background which might take some time.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>INFO  [20:34:35.857] Start raster prediction 
-INFO  [20:34:35.862] Prediction is executed with a chunksize of 200, 1 chunk(s) in total, 122848 values per chunk 
-INFO  [20:34:35.931] 2174 
-INFO  [20:34:36.164] 2168 
-INFO  [20:34:36.172] Chunk 1 of 1 finished 
-INFO  [20:34:36.188] Finished raster prediction in 0 seconds </code></pre>
+<pre><code>INFO  [11:08:31.020] Start raster prediction 
+INFO  [11:08:31.025] Prediction is executed with a chunksize of 200, 1 chunk(s) in total, 122848 values per chunk 
+INFO  [11:08:31.101] 2208 
+INFO  [11:08:31.461] 2194 
+INFO  [11:08:31.468] Chunk 1 of 1 finished 
+INFO  [11:08:31.482] Finished raster prediction in 0 seconds </code></pre>
 <pre><code>stars object with 2 dimensions and 1 attribute
 attribute(s):
             Min.  1st Qu.   Median     Mean 3rd Qu.     Max.
@@ -2662,7 +2660,7 @@ y    1 352 9120761 -28.5 SIRGAS 2000 / UTM zone 25S FALSE   NULL [y]</code></pre
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <!--radix_placeholder_navigation_after_body--><html><body>
 <div class="distill-site-nav distill-site-footer">
-<p>Â© Copyright 2022 mlr-org</p>
+<p>Â© Copyright 2022 mlr-org. Built with <a href="https://rstudio.github.io/distill/">Distill for R Markdown</a>.</p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 </body></html>

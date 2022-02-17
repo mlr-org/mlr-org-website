@@ -2327,7 +2327,46 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: #FBC6A4;
   }
 
-  </style>
+  /* Package grid */
+  .grid-container-resources {
+    display: inline-grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  /* Package grid 3 columns on desktop */
+  @media only screen and (min-width: 768px) {
+    /* Package grid */
+    .grid-container-resources {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
+
+  .grid-item-resources {
+    text-align: left;
+    padding: 10px;
+    background-color: #f1f1f1;
+  } 
+
+  .grid-item-resources:hover {
+    background-color: #cccccc;
+  } 
+
+  .grid-icon-resources {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  div.grid-item-resources a {
+    border-bottom: 0px;
+    text-decoration: none;
+  }
+
+  div.grid-icon-resources i {
+    font-size: 3rem;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2541,47 +2580,90 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<h1 id="general">General</h1>
-<ul>
-<li>We <em>started</em> writing a <a href="https://mlr3book.mlr-org.com/">book</a>. This should be the central entry point to the package.</li>
-<li>The <a href="https://mlr3gallery.mlr-org.com">mlr3gallery</a> has some case studies and demonstrates how frequently occurring problems can be solved. It is still in early days so stay tuned for more to come.</li>
-<li><a href="https://mlr3.mlr-org.com/reference/">Reference manual</a></li>
-<li><a href="https://github.com/mlr-org/mlr3/wiki/FAQ">FAQ</a></li>
-<li>Ask questions on <a href="https://stackoverflow.com/questions/tagged/mlr3">Stackoverflow (tag #mlr3)</a></li>
-<li><strong>Extension Learners</strong>
-<ul>
-<li>Recommended core regression, classification, and survival learners are in <a href="https://github.com/mlr-org/mlr3learners">mlr3learners</a></li>
-<li>All others are in <a href="https://github.com/mlr-org/mlr3extralearners">mlr3extralearners</a></li>
-<li>Use the <a href="https://mlr3extralearners.mlr-org.com/articles/learners/list_learners.html">learner search</a> to get a simple overview</li>
-<li>Use the <a href="https://mlr3extralearners.mlr-org.com/articles/learners/learner_status.html">learner status</a> to see their build status</li>
-</ul></li>
-<li><strong>Cheatsheets</strong>
-<ul>
-<li><a href="https://cheatsheets.mlr-org.com">Overview of cheatsheets</a></li>
-<li><a href="https://cheatsheets.mlr-org.com/mlr3.pdf">mlr3</a></li>
-<li><a href="https://cheatsheets.mlr-org.com/mlr3tuning.pdf">mlr3tuning</a></li>
-<li><a href="https://cheatsheets.mlr-org.com/mlr3pipelines.pdf">mlr3pipelines</a></li>
-</ul></li>
-<li><strong>Videos</strong>:
-<ul>
-<li><a href="https://www.youtube.com/watch?v=wsP2hiFnDQs">useR2019 talk on mlr3</a></li>
-<li><a href="https://www.youtube.com/watch?v=gEW5RxkbQuQ">useR2019 talk on mlr3pipelines and mlr3tuning</a></li>
-<li><a href="https://www.youtube.com/watch?v=T43hO2o_nZw">useR2020 tutorial on mlr3, mlr3tuning and mlr3pipelines</a></li>
-<li><a href="https://av.tib.eu/media/55271">Recorded talk about mlr3spatiotempcv and mlr3spatial at OpenDataScience Europe Conference 2021 in Wageningen, NL</a></li>
-</ul></li>
-<li><strong>Courses/Lectures</strong>
-<ul>
-<li>The course <a href="https://introduction-to-machine-learning.netlify.app/">Introduction to Machine learning (I2ML)</a> is a free and open flipped classroom course on the basics of machine learning. <code>mlr3</code> is used in the <a href="https://github.com/slds-lmu/lecture_i2ml/tree/master/code-demos-pdf">demos</a> and <a href="https://github.com/slds-lmu/lecture_i2ml/tree/master/exercises">exercises</a>.</li>
-</ul></li>
-<li><strong>Templates/Tutorials</strong>
-<ul>
-<li><a href="https://github.com/mlr-org/mlr3-learndrake">mlr3-learndrake</a>: Shows how to use mlr3 with <a href="https://docs.ropensci.org/drake/">drake</a> for reproducible ML workflow automation.</li>
-</ul></li>
-<li><a href="https://github.com/mlr-org/mlr3/wiki/Extension-Packages">List of extension packages</a></li>
-<li><a href="https://github.com/mlr-org/mlr-outreach">mlr-outreach</a> contains public talks and slides resources.</li>
-<li>Our <a href="https://mlr-org.com/">blog</a> about <em>mlr</em> and <em>mlr3</em>. (We are not the most frequent bloggers ;) )</li>
-<li><a href="https://github.com/mlr-org/mlr3/wiki">Wiki</a>: Contains mainly information for developers.</li>
-</ul>
+<h2 id="general">General</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://mlr3book.mlr-org.com/">Book</a> <i class="bi-book"></i>
+</h3>
+Central entry point to the mlr3verse.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://mlr3gallery.mlr-org.com/">Gallery</a> <i class="bi-image"></i>
+</h3>
+The gallery has some case studies and demonstrates how frequently occurring problems can be solved.
+</div>
+</div>
+<h2 id="cheat-sheets">Cheat Sheets</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://cheatsheets.mlr-org.com/mlr3.pdf">mlr3</a> <i class="bi-file-text"></i>
+</h3>
+Core package cheat sheet.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://cheatsheets.mlr-org.com/mlr3tuning.pdf">mlr3tuning</a> <i class="bi-file-text"></i>
+</h3>
+Tuning cheat sheet.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://cheatsheets.mlr-org.com/mlr3fselect.pdf">mlr3fselect</a> <i class="bi-file-text"></i>
+</h3>
+Feature selection cheat sheet.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://cheatsheets.mlr-org.com/mlr3pipelines.pdf">mlr3pipelines</a> <i class="bi-file-text"></i>
+</h3>
+Pipelines cheat sheet.
+</div>
+</div>
+<h2 id="videos">Videos</h2>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://www.youtube.com/watch?v=wsP2hiFnDQs">useR2019 talk</a> <i class="bi-youtube"></i>
+</h3>
+on mlr3book.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://www.youtube.com/watch?v=gEW5RxkbQuQ">useR2019 talk</a> <i class="bi-youtube"></i>
+</h3>
+on mlr3pipelines and mlr3tuning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://www.youtube.com/watch?v=T43hO2o_nZw">useR2020 tutorial</a> <i class="bi-youtube"></i>
+</h3>
+on mlr3, mlr3tuning and mlr3pipelines.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://av.tib.eu/media/55271">ODSC talk 2021</a> <i class="bi-youtube"></i>
+</h3>
+about mlr3spatiotempcv and mlr3spatial.
+</div>
+</div>
+<h3 id="courseslectures">Courses/Lectures</h3>
+<div class="grid-container-package">
+<div class="grid-item-package">
+<h3>
+<a href="https://introduction-to-machine-learning.netlify.app/">I2ML course</a> <i class="bi-display"></i>
+</h3>
+is a free and open flipped classroom course on the basics of machine learning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr-outreach">mlr-outreach</a> <i class="bi-display"></i>
+</h3>
+contains public talks and slides resources.
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2598,7 +2680,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
-<p>© Copyright 2022 mlr-org</p>
+<p>© Copyright 2022 mlr-org. Built with <a href="https://rstudio.github.io/distill/">Distill for R Markdown</a>.</p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 

@@ -2327,7 +2327,46 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: #FBC6A4;
   }
 
-  </style>
+  /* Package grid */
+  .grid-container-resources {
+    display: inline-grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  /* Package grid 3 columns on desktop */
+  @media only screen and (min-width: 768px) {
+    /* Package grid */
+    .grid-container-resources {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
+
+  .grid-item-resources {
+    text-align: left;
+    padding: 10px;
+    background-color: #f1f1f1;
+  } 
+
+  .grid-item-resources:hover {
+    background-color: #cccccc;
+  } 
+
+  .grid-icon-resources {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  div.grid-item-resources a {
+    border-bottom: 0px;
+    text-decoration: none;
+  }
+
+  div.grid-icon-resources i {
+    font-size: 3rem;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2541,83 +2580,76 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
+<p>The mlr3 ecosystem is a collection of R packages for machine learning. The base package mlr3 only provides the basic building blocks for machine learning. The extensions packages extent mlr3 with functionality for specialized tasks. The packages are listed bellow with a short description. For more information on the packages, check out their reference manuals. The dot next to the package name indicates the <a href="https://lifecycle.r-lib.org/articles/stages.html">lifecycle stage</a>. Packages with a green dot <i class="bi-circle-fill status-stable"></i> are stable. Experimental packages are marked with an orange dot <i class="bi-circle-fill status-maturing"></i>.</p>
+<!---
+Collection of mlr3 ecosystem packages.
+Package should be described in one sentence.
+-->
 <h2 id="core"><i class="bi-house-heart"></i> Core</h2>
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3">mlr3</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3.mlr-org.com/">mlr3</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Basic building blocks for machine learning.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3verse">mlr3verse</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3verse.mlr-org.com/">mlr3verse</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
-Meta-package for installing and using core mlr3 packages.
+Meta-package intended to simplify both installation and loading of packages from the mlr3 ecosystem.
 </div>
 </div>
 <h2 id="optimization"><i class="bi-sliders"></i> Optimization</h2>
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/bbotk">bbotk</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3tuning.mlr-org.com/">mlr3tuning</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
-Black-box optimization toolkit.
+Hyperparameter tuning for mlr3 learners.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/paradox">paradox</a> <i class="bi-circle-fill status-stable"></i>
-</h3>
-Universal parameter space description and tools.
-</div>
-<div class="grid-item-package">
-<h3>
-<a href="https://github.com/mlr-org/mlr3tuning">mlr3tuning</a> <i class="bi-circle-fill status-stable"></i>
-</h3>
-Hyperparameter tuning.
-</div>
-<div class="grid-item-package">
-<h3>
-<a href="https://github.com/mlr-org/mlr3hyperband">mlr3hyperband</a> <i class="bi-circle-fill status-stable"></i>
-</h3>
-Adds hyperband optimization to mlr3tuning.
-</div>
-<div class="grid-item-package">
-<h3>
-<a href="https://github.com/mlr-org/mlr3mbo">mlr3mbo</a> <i class="bi-circle-fill status-maturing"></i>
-</h3>
-Adds model-based optimization to mlr3tuning.
-</div>
-<div class="grid-item-package">
-<h3>
-<a href="https://github.com/mlr-org/miesmuschel">miesmuschel</a> <i class="bi-circle-fill status-maturing"></i>
-</h3>
-Adds flexible mixed integer evolutionary strategies.
-</div>
-<div class="grid-item-package">
-<h3>
-<a href="https://github.com/mlr-org/mlr3tuningspaces">mlr3tuningspaces</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3tuningspaces.mlr-org.com/">mlr3tuningspaces</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Collection of search spaces for hyperparameter tuning.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3automl">mlr3automl</a> <i class="bi-circle-fill status-maturing"></i>
+<a href="https://mlr3hyperband.mlr-org.com/">mlr3hyperband</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
-Automated Machine Learning.
+Successive halving and hyperband tuner for mlr3tuning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://mlr3mbo.mlr-org.com/">mlr3mbo</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Model-based optimization for mlr3tuning.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/miesmuschel/">miesmuschel</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Flexible mixed integer evolutionary strategies.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://github.com/mlr-org/mlr3automl/">mlr3automl</a> <i class="bi-circle-fill status-maturing"></i>
+</h3>
+Automated machine learning.
 </div>
 </div>
 <h2 id="feature-selection"><i class="bi-funnel"></i> Feature Selection</h2>
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3filters">mlr3filters</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3fselect.mlr-org.com/">mlr3filters</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Filter feature selection.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3fselect">mlr3fselect</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3fselect.mlr-org.com/">mlr3fselect</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Wrapper feature selection.
 </div>
@@ -2626,49 +2658,50 @@ Wrapper feature selection.
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3db">mlr3db</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3db.mlr-org.com/">mlr3db</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Data backend to transparently work with databases.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3oml">mlr3oml</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3oml.mlr-org.com/">mlr3oml</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Connector to OpenML.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3data">mlr3data</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3data.mlr-org.com/">mlr3data</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
-Additional data sets and tasks.
+Data sets and tasks.
 </div>
 </div>
 <h2 id="learners"><i class="bi-pen"></i> Learners</h2>
+<p>The mlr3 ecosystem</p>
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3learners">mlr3learners</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3learners.mlr-org.com/">mlr3learners</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Essential learners for mlr3, maintained by the mlr-org team.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3extralearners">mlr3extralearners</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3extralearners.mlr-org.com/">mlr3extralearners</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Extra learners for mlr3, implemented by the community.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3keras">mlr3keras</a> <i class="bi-circle-fill status-maturing"></i>
+<a href="https://github.com/mlr-org/mlr3keras/">mlr3keras</a> <i class="bi-circle-fill status-maturing"></i>
 </h3>
-Deep learning via keras.
+Deep learning with Keras.
 </div>
 </div>
 <h2 id="visualization"><i class="bi-bar-chart-line"></i> Visualization</h2>
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3viz">mlr3viz</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3viz.mlr-org.com/">mlr3viz</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Visualizations for tasks, predictions, resample results and benchmarks.
 </div>
@@ -2677,7 +2710,7 @@ Visualizations for tasks, predictions, resample results and benchmarks.
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3pipelines">mlr3pipelines</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3pipelines.mlr-org.com/">mlr3pipelines</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Dataflow programming toolkit.
 </div>
@@ -2686,25 +2719,25 @@ Dataflow programming toolkit.
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3spatiotempcv">mlr3spatiotempcv</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3spatiotempcv.mlr-org.com/">mlr3spatiotempcv</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Spatiotemporal resampling and visualization methods.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3cluster">mlr3cluster</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3cluster.mlr-org.com/">mlr3cluster</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Cluster analysis.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3proba">mlr3proba</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3proba.mlr-org.com/">mlr3proba</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
-Toolkit for making probabilistic predictions.
+Probabilistic predictions.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3ordinal">mlr3ordinal</a> <i class="bi-circle-fill status-maturing"></i>
+<a href="https://mlr3ordinal.mlr-org.com/">mlr3ordinal</a> <i class="bi-circle-fill status-maturing"></i>
 </h3>
 Ordinal regression.
 </div>
@@ -2716,46 +2749,58 @@ Storing and working with multi-output tasks.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3temporal">mlr3temporal</a> <i class="bi-circle-fill status-maturing"></i>
+<a href="https://mlr3temporal.mlr-org.com/">mlr3temporal</a> <i class="bi-circle-fill status-maturing"></i>
 </h3>
 Time series analysis.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3spatial">mlr3spatial</a> <i class="bi-circle-fill status-maturing"></i>
+<a href="https://mlr3spatial.mlr-org.com/">mlr3spatial</a> <i class="bi-circle-fill status-maturing"></i>
 </h3>
-Methods for spatial objects.
+Spatial data backends and prediction functions.
 </div>
 </div>
 <h2 id="utilities"><i class="bi-balloon"></i> Utilities</h2>
 <div class="grid-container-package">
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3misc">mlr3misc</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://bbotk.mlr-org.com/">bbotk</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Black-box optimization toolkit.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://paradox.mlr-org.com/">paradox</a> <i class="bi-circle-fill status-stable"></i>
+</h3>
+Universal parameter space description and tools.
+</div>
+<div class="grid-item-package">
+<h3>
+<a href="https://mlr3misc.mlr-org.com/">mlr3misc</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Miscellaneous helper functions.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3measures">mlr3measures</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3measures.mlr-org.com/">mlr3measures</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Performance measures for supervised learning.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3benchmark">mlr3benchmark</a> <i class="bi-circle-fill status-stable"></i>
+<a href="https://mlr3benchmark.mlr-org.com/">mlr3benchmark</a> <i class="bi-circle-fill status-stable"></i>
 </h3>
 Analysis and tools for benchmarking.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3fairness">mlr3fairness</a> <i class="bi-circle-fill status-maturing"></i>
+<a href="https://mlr3fairness.mlr-org.com/">mlr3fairness</a> <i class="bi-circle-fill status-maturing"></i>
 </h3>
 Machine learning fairness.
 </div>
 <div class="grid-item-package">
 <h3>
-<a href="https://github.com/mlr-org/mlr3batchmark">mlr3batchmark</a> <i class="bi-circle-fill status-maturing"></i>
+<a href="https://github.com/mlr-org/mlr3batchmark/">mlr3batchmark</a> <i class="bi-circle-fill status-maturing"></i>
 </h3>
 Connector between mlr3 and batchtools.
 </div>
@@ -2776,7 +2821,7 @@ Connector between mlr3 and batchtools.
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
-<p>© Copyright 2022 mlr-org</p>
+<p>© Copyright 2022 mlr-org. Built with <a href="https://rstudio.github.io/distill/">Distill for R Markdown</a>.</p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 

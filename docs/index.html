@@ -2327,7 +2327,46 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: #FBC6A4;
   }
 
-  </style>
+  /* Package grid */
+  .grid-container-resources {
+    display: inline-grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  /* Package grid 3 columns on desktop */
+  @media only screen and (min-width: 768px) {
+    /* Package grid */
+    .grid-container-resources {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
+
+  .grid-item-resources {
+    text-align: left;
+    padding: 10px;
+    background-color: #f1f1f1;
+  } 
+
+  .grid-item-resources:hover {
+    background-color: #cccccc;
+  } 
+
+  .grid-icon-resources {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  div.grid-item-resources a {
+    border-bottom: 0px;
+    text-decoration: none;
+  }
+
+  div.grid-icon-resources i {
+    font-size: 3rem;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2695,7 +2734,7 @@ Dataflow programming with pipelines.
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
-<p>© Copyright 2022 mlr-org</p>
+<p>© Copyright 2022 mlr-org. Built with <a href="https://rstudio.github.io/distill/">Distill for R Markdown</a>.</p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 
