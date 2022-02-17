@@ -1,5 +1,8 @@
 ---
 title: "Resources"
+description: |
+  Useful resources for learning mlr3 
+preview: images/logo_color.png
 site: distill::distill_website
 ---
 
