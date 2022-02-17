@@ -1,5 +1,8 @@
 ---
 title: "Machine Learning in R"
+description: |
+  Website of mlr3 - Machine Learning in R.
+preview: images/logo_color.png
 site: distill::distill_website
 ---
 

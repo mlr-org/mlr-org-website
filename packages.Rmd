@@ -1,5 +1,8 @@
 ---
 title: "Packages"
+description: |
+  Packages of the mlr3 ecosystem.  
+review: images/logo_color.png
 site: distill::distill_website
 ---
 
