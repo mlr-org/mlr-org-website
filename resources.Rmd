@@ -58,7 +58,7 @@ site: distill::distill_website
   </div>
 </div>
 
-### Courses/Lectures
+## Courses/Lectures
 
 <div class="grid-container-package">
   <div class="grid-item-package">

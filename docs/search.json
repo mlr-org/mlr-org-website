@@ -5,7 +5,7 @@
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-02-17T11:02:48+01:00"
+      "last_modified": "2022-02-17T11:08:34+01:00"
     },
     {
       "path": "index.html",
@@ -26,7 +26,7 @@
       "title": "Resources",
       "author": [],
       "contents": "\nGeneral\n\n\n\nBook \n\nCentral entry point to the mlr3verse.\n\n\n\nGallery \n\nThe gallery has some case studies and demonstrates how frequently occurring problems can be solved.\n\n\nCheat Sheets\n\n\n\nmlr3 \n\nCore package cheat sheet.\n\n\n\nmlr3tuning \n\nTuning cheat sheet.\n\n\n\nmlr3fselect \n\nFeature selection cheat sheet.\n\n\n\nmlr3pipelines \n\nPipelines cheat sheet.\n\n\nVideos\n\n\n\nuseR2019 talk \n\non mlr3book.\n\n\n\nuseR2019 talk \n\non mlr3pipelines and mlr3tuning.\n\n\n\nuseR2020 tutorial \n\non mlr3, mlr3tuning and mlr3pipelines.\n\n\n\nODSC talk 2021 \n\nabout mlr3spatiotempcv and mlr3spatial.\n\n\nCourses/Lectures\n\n\n\nI2ML course \n\nis a free and open flipped classroom course on the basics of machine learning.\n\n\n\nmlr-outreach \n\ncontains public talks and slides resources.\n\n\n\n\n\n",
-      "last_modified": "2022-02-17T11:02:50+01:00"
+      "last_modified": "2022-02-17T11:18:23+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
