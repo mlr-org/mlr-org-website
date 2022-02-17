@@ -43,7 +43,7 @@ machine learning in the R language.
 <a href="https://stackoverflow.com/questions/tagged/mlr3" class="btn"><i class="bi-stack-overflow"></i> StackOverflow</a>
 </div>
 
-# Quick Start
+## Quick Start
 
 The mlr3verse meta-package installs mlr3 and some of the most important extension packages:
 
@@ -135,7 +135,7 @@ graph_learner = as_learner(graph_stack)
 graph_learner$train(task)
 ```
 
-# Citing mlr3
+## Citing mlr3
 
 If you use `mlr3`, please cite our JOSS article:
 
