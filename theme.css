@@ -72,6 +72,19 @@ d-appendix {
   --bkgd-color:       #455a64;
 }
 
+.article-banner {
+  width: auto;
+  height: auto;
+  border: 3;
+}
+
+img[src="assets/banner.png"] {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
 
@@ -98,12 +111,12 @@ d-appendix {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
-} 
+}
 
 .grid-item {
   text-align: center;
   padding: 30px;
-} 
+}
 
 .grid-icon {
   padding-bottom: 15px;
@@ -136,7 +149,7 @@ div.grid-icon i {
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: #2a363c;
-} 
+}
 
 /* Button icons */
 a.btn i {
@@ -178,17 +191,17 @@ h3 {
   .grid-container-package {
     grid-template-columns: repeat(3, 1fr);
   }
-} 
+}
 
 .grid-item-package {
   text-align: left;
   padding: 10px;
   background-color: #f1f1f1;
-} 
+}
 
 .grid-item-package:hover {
   background-color: #cccccc;
-} 
+}
 
 div.grid-item-package h3 {
   margin-top: 0;

@@ -4,9 +4,13 @@ description: |
   Website of the mlr3 ecosystem
 preview: images/logo_color.png
 site: distill::distill_website
+output:
+    distill::distill_article:
+      includes:
+        in_header: assets/header.html
 ---
 
-An open-source machine learning framework providing a unified interface for 
+An open-source machine learning framework providing a unified interface for
 machine learning in the R language.
 
 
@@ -34,7 +38,7 @@ machine learning in the R language.
   <div class="grid-item">
   <div class="grid-icon"><i class="bi-share"></i></div>
   Dataflow programming with pipelines.</div>
-</div> 
+</div>
 
 <div class="btn-container">
 <a href="https://github.com/mlr-org/mlr3" class="btn"><i class="bi-github"></i> GitHub</a>
