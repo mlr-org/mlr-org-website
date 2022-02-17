@@ -5,7 +5,7 @@ favicon: images/favicon.ico
 description: |
   Website of mlr3 - Machine Learning in R.
 output_dir: "docs"
-base_url: https://mlr-org.com/
+base_url: https://mlr-org.github.io/mlr-org-website/
 rss:
   full_content: true
   categories:

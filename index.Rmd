@@ -56,37 +56,42 @@ lgr::get_logger("mlr3")$set_threshold("warn")
 lgr::get_logger("bbotk")$set_threshold("warn")
 ```
 
+Simple resampling:
+
+1. Load task and learner. Optionally, set hyperparameter values.
+1. Choose resampling strategy.
+1. Run automatic resampling
+1. Score with classification accuracy
+
 ```{r, eval=FALSE}
-library(mlr3)
+library(mlr3verse)
 
-# retrieve task
 task = tsk("penguins")
-
-# load learner and set hyperparameter
 learner = lrn("classif.rpart", cp = .01)
 
-# automatic resampling
 resampling = rsmp("cv", folds = 3L)
+
 rr = resample(task, learner, resampling)
 
-# set measure and score
-measure = msr("classif.acc")
-rr$score(measure)
+rr$score(msr("classif.acc"))
 ```
 
 ### Tuning Example
 
+Quick tuning of a simple classification tree on the on penguins data set:
+
+1. Choose task.
+1. Load learner and set search space in one go.
+1. Run hyperparameter tuning with random search.
+1. Get best performing hyperparameter configuration.
+
 ```{r, eval=FALSE}
-library(mlr3tuning)
 library(mlr3tuningspaces)
 
-# retrieve task
 task = tsk("penguins")
 
-# load learner and set search space
 learner = lts(lrn("classif.rpart"))
 
-# hyperparameter tuning on the penguins data set
 instance = tune(
   method = "random_search",
   task = task,
@@ -97,32 +102,33 @@ instance = tune(
   batch_size = 5
 )
 
-# best performing hyperparameter configuration
 instance$result
 ```
 
 ### Pipelines Example
 
-```{r, eval=FALSE}
-library(mlr3)
-library(mlr3pipelines)
-library(mlr3learners)
+Create a stacked learner:
 
-# retrieve task
+1. Load task.
+1. Choose list of base learners and super learner.
+1. Convert to graph learner.
+1. Train on german credit task.
+
+```{r, eval=FALSE}
+library(mlr3verse)
+library(mlr3pipelines)
+
 task = tsk("german_credit")
 
-# set base and super learner
 base_learners = list(
   lrn("classif.rpart", predict_type = "prob"),
   lrn("classif.kknn", predict_type = "prob")
 )
 super_learner = lrn("classif.log_reg")
 
-# create pipeline and convert to graph learner
 graph_stack = pipeline_stacking(base_learners, super_learner)
 graph_learner = as_learner(graph_stack)
 
-# train on german credit task
 graph_learner$train(task)
 ```
 
