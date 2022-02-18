@@ -6,13 +6,15 @@ The [mlr-org.com](https://mlr-org.com/) website is created with [Distill for R M
 
 1. Add a new post with `distill::create_post("Title of Post in Title Case")`.
 The new post is created within the `_posts/` subdirectory.
-2. Write the post. 
+1. Write the post. 
 Place external images in the subdirectory.
-3. Run `rmarkdown::render_site(encoding = 'UTF-8')` to render the website.
+1. Call `rmarkdown::render("_posts/2022-02-22-example-post/example-post.Rmd")` to render the post.
+1. Run `rmarkdown::render_site(encoding = 'UTF-8')` to render the website.
 The website is created within the `docs/` directory. 
 Open `index.html` to check your post.
-4. Open a pull request and commit all changed files.
-Merged post are published via GitHub Pages.
+1. Run `rmarkdown::render("_posts/2022-02-22-example-post/example-post.Rmd")` again or otherwise the rss feed is empty ([https://github.com/rstudio/distill/issues/381](#381))
+1. Open a pull request and commit all changed files.
+Merged posts are published via GitHub Pages.
 
 ## How to change the website
 

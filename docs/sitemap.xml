@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/blog.html</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-17T12:01:34+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/</loc>
-    <lastmod>2022-02-17T21:11:58+01:00</lastmod>
+    <lastmod>2022-02-18T12:14:57+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/packages.html</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-17T11:57:34+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/resources.html</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-17T11:59:42+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2022-02-03-google-summer-of-code-and-mlr3/</loc>
-    <lastmod>2022-02-16T18:35:10+01:00</lastmod>
+    <lastmod>2022-02-18T12:45:20+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2022-01-03-mlr3-package-updates-q42021/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-16T20:33:24+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2021-12-01-announcing-mlr3spatial/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-17T11:35:09+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2021-10-07-mlr-workshop-2021-recap/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-16T20:38:45+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2021-09-29-mlr3-package-updates-q32021/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-16T20:40:13+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2020-12-20-the-cross-validation-trainpredict-misunderstanding/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-16T20:42:30+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2020-11-12-announcing-mlr3spatiotempcv/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-16T20:43:49+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2020-08-26-introducing-mlr3cluster-cluster-analysis-package/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-16T21:00:00+01:00</lastmod>
   </url>
   <url>
     <loc>https://mlr-org.github.io/mlr-org-website/posts/2020-08-04-user-2020-tutorial-on-mlr3-mlr3tuning-and-pipelines/</loc>
-    <lastmod>2022-02-17T21:02:10+01:00</lastmod>
+    <lastmod>2022-02-18T12:21:50+01:00</lastmod>
   </url>
 </urlset>

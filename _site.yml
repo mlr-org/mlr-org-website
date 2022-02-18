@@ -10,6 +10,9 @@ rss:
   full_content: true
   categories:
     - R
+collections:
+  posts:
+    feed_items_max: 1
 navbar:
   logo:
     image: images/logo.png

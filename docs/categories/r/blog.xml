@@ -15,7 +15,7 @@
     <lastBuildDate>Wed, 02 Feb 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Google Summer of Code and mlr3</title>
-      <dc:creator>Florian Pfisterer</dc:creator>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Florian Pfisterer</dc:creator>
       <link>https://mlr-org.github.io/mlr-org-website/posts/2022-02-03-google-summer-of-code-and-mlr3</link>
       <description>
 
@@ -29,11 +29,11 @@
 &lt;/ul&gt;
 &lt;p&gt;If you feel like one of the projects sparks your interest, feel free to get in contact with us (&lt;a href="mailto:mlr-org@stat.uni-muenchen.de" class="email"&gt;mlr-org@stat.uni-muenchen.de&lt;/a&gt;)! Similarly, if you would like to &lt;strong&gt;propose your own idea/project&lt;/strong&gt; also get in contact with us, and we will figure out if this is a fit for our organization!&lt;/p&gt;
 &lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
-      <distill:md5>065e9306124be02d42e5444f17ec9277</distill:md5>
+      <distill:md5 xmlns:distill="https://distill.pub/journal/">065e9306124be02d42e5444f17ec9277</distill:md5>
       <category>R</category>
       <guid>https://mlr-org.github.io/mlr-org-website/posts/2022-02-03-google-summer-of-code-and-mlr3</guid>
       <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
-      <media:content url="https://mlr-org.github.io/mlr-org-website/posts/2022-02-03-google-summer-of-code-and-mlr3/GSoC-Vertical.png" medium="image" type="image/png" width="1000" height="1000"/>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mlr-org.github.io/mlr-org-website/posts/2022-02-03-google-summer-of-code-and-mlr3/GSoC-Vertical.png" medium="image" type="image/png" width="1000" height="1000"/>
     </item>
   </channel>
 </rss>
